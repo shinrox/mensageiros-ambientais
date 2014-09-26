@@ -120,7 +120,10 @@ module.exports = function (grunt) {
           ]
         }]
       },
-      server: '.tmp'
+      server: '.tmp',
+      options: {
+         deleteEmptyFolders: false
+      }
     },
 
     // Make sure code styles are up to par and there are no obvious mistakes
@@ -344,7 +347,17 @@ module.exports = function (grunt) {
         }, {
           src: 'node_modules/apache-server-configs/dist/.htaccess',
           dest: '<%= config.dist %>/.htaccess'
-        }]
+        },
+        {
+          expand: true,
+          dot: true,
+          cwd: '<%= config.app %>',
+          dest: '<%= config.dist %>',
+          src: [
+            'assets/{,*/}*.*'
+          ]
+        }
+        ]
       },
       styles: {
         expand: true,
