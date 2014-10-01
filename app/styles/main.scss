@@ -26,11 +26,12 @@ body {
 
 body > div {
   position:fixed;
-  top:0;
+  top:50%;
   left:50%;
   width:1144px;
   height:643px;
   margin-left: -572px;
+  margin-top: -321px;
   background:transparent center no-repeat;
   background-size:cover;
 }
@@ -270,7 +271,8 @@ video {
 
 
 .scene-4 {
-  background: url("../images/theme1/scene4.jpg");
+  background: url("../images/theme1/scene4.jpg") no-repeat scroll center center transparent;
+  background-size: 100% auto;
 
   .image-quote, .image-hotspot {
     height: 100px;
@@ -314,14 +316,36 @@ video {
   .headline {
     font: 700 3.8rem/1.2 'Asul',Arial,sans-serif;
   }
+
+  .image-wrapper img{
+    width: 100%;
+  }
 }
 
 .scene-5 {
+  height: 100%;
   width: auto;
   box-shadow: 0px 0px 20px 3px #222;
   
-  img {
-    float:right;
+  .image-wrapper {
+    height: 100%;
+    img {
+      float:right;
+      height: 100%;
+    }
+  }
+}
+
+.scene-6 {
+  height: 100%;
+  overflow: hidden;
+
+  .image-wrapper {
+    height: 100%;
+
+    img {
+      height: 100%;
+    }
   }
 }
 

@@ -1,6 +1,4 @@
-console.log "'Allo from CoffeeScript!"
-
-API = {}
+window.API = {}
 API.videos = {}
 API.hotspotOn = false
 API.playPauseVideo = (id, play)->
@@ -8,7 +6,7 @@ API.playPauseVideo = (id, play)->
   return if !video
   if play and video.paused
     video.play()
-  else
+  else if !play
     if !video.paused
       video.pause()
 
@@ -38,6 +36,52 @@ API.pauseAll = ()->
   def.resolve()
 
   return def.promise()
+
+API.setSize = ()->
+  base = 
+    w: 1144
+    h: 643
+
+  current =
+    w: $(window).width()
+    h: $(window).height()
+
+
+  if current.w > base.w
+    if current.h <= base.h
+      percent = current.h / base.h
+    else
+      percent = current.w / base.w
+
+    if base.h * percent > current.h
+      percent = current.h / base.h
+  else
+    percent = current.w / base.w
+
+  fixed = 
+    w: base.w * percent
+    h: base.h * percent
+
+  $('.theme').css({
+    width: fixed.w
+    height: fixed.h
+    "margin-left": -(fixed.w / 2)
+    "margin-top": -(fixed.h / 2)
+  })
+
+onResize = do ->
+  throttle = 70 # tempo em ms
+  lastExecution = new Date(new Date().getTime() - throttle)
+
+  executeAction = () ->
+    API.setSize()
+    # API.skrollr.refresh()
+
+  return ->
+    if (lastExecution.getTime() + throttle) <= new Date().getTime()
+      lastExecution = new Date()
+      return executeAction.apply(this)
+
  
 API.openHotSpot = (hotspot)->
   $(".hotspot-wrapper[data-hotspot='#{hotspot}']").fadeIn 500, (e)->
@@ -45,6 +89,14 @@ API.openHotSpot = (hotspot)->
     API.hotspotOn = true;
     API.pauseAll().then ()->
       $this.find("video")[0].play();
+
+
+$ ()->
+  # Adiciona um handler para ajustar o tamanho da página ao  
+  # redimensionar a janela do browser
+  $(window).unbind('resize', onResize).bind 'resize', onResize
+
+  API.setSize()
 
 $(window).load ->
   API.videos =
