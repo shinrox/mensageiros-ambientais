@@ -75,7 +75,7 @@ onResize = do ->
 
   executeAction = () ->
     API.setSize()
-    # API.skrollr.refresh()
+    API.skrollr.refresh($(".theme *"))
 
   return ->
     if (lastExecution.getTime() + throttle) <= new Date().getTime()
