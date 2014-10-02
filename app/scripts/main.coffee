@@ -98,7 +98,9 @@ $ ()->
 
   API.setSize()
 
-$(window).load ->
+
+Pace.on 'hide', ->
+  $("#loading").fadeOut()
   API.videos =
     v1: $(".scene-1 video")[0]
     v2: $(".scene-2 video")[0]
@@ -108,7 +110,11 @@ $(window).load ->
     v13: $(".scene-13 video")[0]
     v14: $(".scene-14 video")[0]
 
+
+
   API.skrollr = skrollr.init({
+    smoothScrolling: true
+    smoothScrollingDuration: 1000
     render: (data)->
 
       return if API.hotspotOn
@@ -157,6 +163,7 @@ $(window).load ->
         API.playPauseVideo(14, false)
         
   })
+  
 
 
   $(".hotspot-area").on "click", ()->

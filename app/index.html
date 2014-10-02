@@ -18,13 +18,21 @@
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/main.css">
+  <link href="styles/pace-theme-center-simple.css" rel="stylesheet" />
   <!-- endbuild -->
   <!-- build:js scripts/vendor/modernizr.js -->
   <script src="bower_components/modernizr/modernizr.js"></script>
   <!-- endbuild -->
 
+  <!-- build:js scripts/vendor/pace.js -->
+  <script src="scripts/pace.js"></script>
+  <!-- endbuild -->
+
+
 </head>
 <body>
+    <div id="loading" style='width: 100%; height: 100%; position:fixed; top: 0; left:0; background-color: #555; z-index:1999; margin: 0;'>
+    </div>
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       <![endif]-->
