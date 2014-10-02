@@ -69,6 +69,7 @@ API.setSize = ()->
     "margin-top": -(fixed.h / 2)
   })
 
+
 onResize = do ->
   throttle = 70 # tempo em ms
   lastExecution = new Date(new Date().getTime() - throttle)
@@ -85,6 +86,7 @@ onResize = do ->
  
 API.openHotSpot = (hotspot)->
   $(".hotspot-wrapper[data-hotspot='#{hotspot}']").fadeIn 500, (e)->
+    $("body").css("overflow", "hidden")
     $this = $(this)
     API.hotspotOn = true;
     API.pauseAll().then ()->
@@ -170,6 +172,7 @@ Pace.on 'hide', ->
     API.openHotSpot($(this).data("hotspot"))
 
   $(".hotspot-wrapper .close").on "click", ()->
+    $("body").css("overflow", "")
     $this = $(this)
     API.pauseAll().then ()->
       API.hotspotOn = false;
