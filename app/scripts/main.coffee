@@ -103,29 +103,58 @@ $(window).load ->
     v1: $(".scene-1 video")[0]
     v2: $(".scene-2 video")[0]
     v3: $(".scene-3 video")[0]
+    v7: $(".scene-7 video")[0]
+    v9: $(".scene-9 video")[0]
+    v13: $(".scene-13 video")[0]
+    v14: $(".scene-14 video")[0]
 
   API.skrollr = skrollr.init({
     render: (data)->
 
       return if API.hotspotOn
-      if data.curTop >= 0 and data.curTop < 1500
+      if data.curTop >= 0 and data.curTop <= 1500
         API.playPauseVideo(1, true)
       else
         API.playPauseVideo(1, false)
 
-      if data.curTop > 1300 and data.curTop < 22000
+      if data.curTop >= 1300 and data.curTop <= 22000
         $(".scene-2 audio")[0].play()
-        API.playPauseVideo(2, true)
+
+        API.playPauseVideo(2, data.curTop <= 4500)
       else
         API.playPauseVideo(2, false)
         
         $(".scene-2 audio")[0].pause()
 
-      if data.curTop > 4000 and data.curTop < 9500
+      if data.curTop >= 4000 and data.curTop <= 10100
         API.playPauseVideo(3, true)
         
       else
         API.playPauseVideo(3, false)
+
+      if data.curTop >= 20000 and data.curTop <= 27500
+        API.playPauseVideo(7, true)
+        
+      else
+        API.playPauseVideo(7, false)
+
+      if data.curTop >= 29500 and data.curTop <= 40100
+        API.playPauseVideo(9, true)
+        
+      else
+        API.playPauseVideo(9, false)
+
+      if data.curTop >= 64500 and data.curTop <= 74500
+        API.playPauseVideo(13, true)
+        
+      else
+        API.playPauseVideo(13, false)
+
+      if data.curTop > 68500 and data.curTop <= 80000
+        API.playPauseVideo(14, true)
+        
+      else
+        API.playPauseVideo(14, false)
         
   })
 

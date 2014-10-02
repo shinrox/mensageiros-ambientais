@@ -40,10 +40,26 @@ body > div {
   font: 400 3.9rem/1.2 'Cookie',sans-serif;
   letter-spacing: 1px;
   text-shadow: 2px 2px 4px #000;
+}
 
-  .from {
-    font: 400 3.5rem/1.2 'Asul',Arial,sans-serif;
-  }
+.from {
+  font: 400 3.2rem/1.2 'Asul',Arial,sans-serif;
+}
+
+.bl {
+  border-left: 1px solid #FFF;
+}
+
+.bt {
+  border-top: 1px solid #FFF;
+}
+
+.bb {
+  border-bottom: 1px solid #FFF;
+}
+
+.br {
+  border-right: 1px solid #FFF;
 }
 
 .loading {
@@ -214,7 +230,7 @@ video {
   z-index: 1;
 }
 
-.scene-5{
+.scene-5, .scene-10{
   z-index: 6;
 }
 
@@ -226,56 +242,60 @@ video {
   }
 }
 
-.scene-2 .pitanga {
-  width: 61%;
-  height: 50%;
-  position: absolute;
-  left:0;
-  top:0;
-  background-color: rgba(0,0,0,0.2);
-
-   img {
-    width: 100%;
-   }
-}
-
-.scene-2 .placa {
-  width: 40%;
-  height: 100%;
-  position: absolute;
-  border-left: 1px solid #FFF;
-  right:0;
-  top:0;
-  background-color: rgba(0,0,0,0.2);
-
-  img {
-    width: 100%;
-    height: auto;
-  }
-}
-
-.scene-2 .abelha {
+.scene-2 {
   border-top: 1px solid #FFF;
-  width: 61%;
-  height: 50%;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  video {
-    width: 100%;
-    height:auto;
-  }
-}
 
+  .pitanga {
+    width: 61%;
+    height: 50%;
+    position: absolute;
+    left:0;
+    top:0;
+    background-color: rgba(0,0,0,0.2);
+
+     img {
+      width: 100%;
+     }
+  }
+
+  .placa {
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    border-left: 1px solid #FFF;
+    right:0;
+    top:0;
+    background-color: rgba(0,0,0,0.2);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .abelha {
+    border-top: 1px solid #FFF;
+    width: 61%;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    video {
+      width: 100%;
+      height:auto;
+    }
+  }
+
+}
 
 .scene-4 {
+  border-left: 1px solid #FFF;
   background: url("../images/theme1/scene4.jpg") no-repeat scroll center center transparent;
   background-size: 100% auto;
 
   .image-quote, .image-hotspot {
-    height: 100px;
     position: absolute;
     width: 100%;
     background-color: rgba(0,0,0,0.4);
@@ -287,6 +307,7 @@ video {
   }
 
   .image-hotspot {
+    height:100px;
     bottom: 0%;
   }
 
@@ -324,14 +345,16 @@ video {
 
 .scene-5 {
   height: 100%;
-  width: auto;
+  width: 37.91018998272884%;
   box-shadow: 0px 0px 20px 3px #222;
-  
+  overflow: hidden;
+
   .image-wrapper {
     height: 100%;
+
     img {
       float:right;
-      height: 100%;
+      width: 100%;
     }
   }
 }
@@ -340,13 +363,228 @@ video {
   height: 100%;
   overflow: hidden;
 
-  .image-wrapper {
+  .image-wrapper.placa {
     height: 100%;
 
     img {
       height: 100%;
+
     }
   }
+
+  .image-wrapper.coruja {
+    height: 31.67701863354037%;
+    width: 16.171328671328672%;
+    position: absolute;
+    right: 10%;
+    top: 40%;
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+}
+
+.scene-7 {
+  border-bottom: 1px solid #FFF;
+}
+
+.scene-8 {
+  height: 100%;
+  overflow: hidden;
+
+  .image-wrapper.flor {
+    height: 100%;
+    width: 30%;
+    position: absolute;
+    border-right: 2px solid #FFF;
+    border-left: 2px solid #FFF;
+
+    img {
+      position: absolute;
+      top: 0; 
+      left:0;
+      height: 100%;
+
+    }
+  }
+}
+
+.scene-9 {
+
+}
+
+.scene-10 {
+
+  .borboleta {
+    width: 61%;
+    height: 50%;
+    position: absolute;
+    right:0;
+    top:0;
+    background-color: rgba(0,0,0,0.2);
+
+     img {
+      width: 100%;
+     }
+  }
+
+  .corrego{
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    left:0;
+    top:0;
+    background-color: rgba(0,0,0,0.2);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .pimenta {
+    width: 61%;
+    height: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+      
+      img {
+        width: 100%;
+        height: auto;
+      }
+  }
+
+}
+
+.scene-11 {
+  top: 100%;
+
+  .image-quote {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+  }
+
+  .image-quote {
+    top: 50%;
+    margin-top: -50px;    
+  }
+
+  p{
+    margin-left: 20px;
+    line-height: 50px;
+  }
+
+  .headline {
+    font: 700 3.8rem/1.2 'Asul',Arial,sans-serif;
+  }
+
+  .image-wrapper img{
+    width: 100%;
+  }
+}
+
+.scene-12 {
+
+  .flor-rosa {
+    width: 33.33%;
+    height: 100%;
+    position: absolute;
+    left:0;
+    top:0;
+    background-color: rgba(0,0,0,0.2);
+
+     img {
+      width: 100%;
+     }
+  }
+
+  .arvore{
+    width: 33.33%;
+    height: 100%;
+    position: absolute;
+    left:33.33%;
+    top:0;
+    background-color: rgba(0,0,0,0.2);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .flor-amarela {
+    width: 33.33%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+      
+      img {
+        width: 100%;
+        height: auto;
+      }
+  }
+
+}
+
+.scene-13 {
+  .image-quote, .image-hotspot {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+  }
+
+  .image-quote {
+    top: 50%;
+    margin-top: -50px;    
+  }
+
+  .image-hotspot {
+    height:100px;
+    bottom: 0%;
+  }
+
+  .claudia-visoni {
+    opacity: 0
+  }
+
+  .image-hotspot{
+    height: auto;
+    padding: 5px 20px;
+    line-height: 100px;
+    
+    img.icon-play{
+      cursor: pointer;
+      height: 80px;
+      width: 80px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+  }
+
+  p, h1.headline {
+    margin-left: 20px;
+    line-height: 50px;
+  }
+
+  .headline {
+    font: 700 3.8rem/1.2 'Asul',Arial,sans-serif;
+  }
+
+  .image-wrapper img{
+    width: 100%;
+  }
+}
+
+.scene-14{
+  
 }
 
 .play-icon{
@@ -364,18 +602,31 @@ video {
   left: 0;
   padding: 0;
   margin: 0;
-  z-index: 500;
+  z-index: 1000;
   overflow: hidden;
+  background-color: #000;
+
+  video {
+    height: 100%;
+    width: 100%;
+  }
 
   .close {
     color: #FFF;
     font-size: 30px;
     position: absolute;
-    right: 0;
+    right: 2%;
     cursor: pointer;
     display:none;
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 40px;
+    background-color: rgba(100,100,100,0.7);
+    top: 2%;
+    border-radius: 4px;
+    box-shadow: 1px 1px 10px 1px #000;
   }
 }
 
