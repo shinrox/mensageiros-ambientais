@@ -118,8 +118,8 @@ Pace.on 'hide', ->
     smoothScrolling: true
     smoothScrollingDuration: 1000
     render: (data)->
-
-      return if API.hotspotOn
+      # return API.playPauseVideo(13, data.curTop >= 60500 and data.curTop <= 68500);
+      
       if data.curTop >= 0 and data.curTop <= 1500
         API.playPauseVideo(1, true)
       else
@@ -146,19 +146,19 @@ Pace.on 'hide', ->
       else
         API.playPauseVideo(7, false)
 
-      if data.curTop >= 29500 and data.curTop <= 40100
+      if data.curTop >= 33000 and data.curTop <= 40100
         API.playPauseVideo(9, true)
         
       else
         API.playPauseVideo(9, false)
 
-      if data.curTop >= 64500 and data.curTop <= 74500
+      if data.curTop >= 60500 and data.curTop <= 67500
         API.playPauseVideo(13, true)
         
       else
         API.playPauseVideo(13, false)
 
-      if data.curTop > 68500 and data.curTop <= 80000
+      if data.curTop > 67500 and data.curTop <= 69000
         API.playPauseVideo(14, true)
         
       else
@@ -177,3 +177,6 @@ Pace.on 'hide', ->
     API.pauseAll().then ()->
       API.hotspotOn = false;
       $(".hotspot-wrapper").fadeOut(400)
+
+$(window).on "unload", ()->
+  window.scrollTo(0,0)

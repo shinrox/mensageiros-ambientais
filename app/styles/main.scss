@@ -212,6 +212,52 @@ video {
   }
 }
 
+.play-icon{
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.hotspot-wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  z-index: 1000;
+  overflow: hidden;
+  background-color: #000;
+
+  video {
+    height: 100%;
+    width: 100%;
+  }
+
+  .close {
+    color: #FFF;
+    font-size: 30px;
+    position: absolute;
+    right: 2%;
+    cursor: pointer;
+    display:none;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 40px;
+    background-color: rgba(100,100,100,0.7);
+    top: 2%;
+    border-radius: 4px;
+    box-shadow: 1px 1px 10px 1px #000;
+  }
+}
+
+.hotspot-wrapper:hover .close{
+  display: block;
+}
 
 
 .scene {
@@ -230,7 +276,7 @@ video {
   z-index: 1;
 }
 
-.scene-5, .scene-10{
+.scene-5, .scene-10, .scene-16{
   z-index: 6;
 }
 
@@ -287,6 +333,10 @@ video {
       height:auto;
     }
   }
+
+}
+
+.scene-3  {
 
 }
 
@@ -391,22 +441,22 @@ video {
 }
 
 .scene-8 {
+  width: auto;
   height: 100%;
   overflow: hidden;
+  right: 0%;
+  left: 101%;
 
   .image-wrapper.flor {
     height: 100%;
-    width: 30%;
-    position: absolute;
     border-right: 2px solid #FFF;
     border-left: 2px solid #FFF;
 
     img {
-      position: absolute;
-      top: 0; 
-      left:0;
       height: 100%;
-
+      width: auto;
+      position: absolute;
+      right: 0;
     }
   }
 }
@@ -535,24 +585,21 @@ video {
 }
 
 .scene-13 {
+  .andrea-pesek {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+
   .image-quote, .image-hotspot {
     position: absolute;
+    bottom:0%;
     width: 100%;
-    background-color: rgba(0,0,0,0.4);
-  }
-
-  .image-quote {
-    top: 50%;
-    margin-top: -50px;    
-  }
-
-  .image-hotspot {
-    height:100px;
-    bottom: 0%;
-  }
-
-  .claudia-visoni {
-    opacity: 0
+    opacity: 1;
+    background-color: rgba(0,0,0,0.8);
   }
 
   .image-hotspot{
@@ -583,54 +630,69 @@ video {
   }
 }
 
-.scene-14{
-  
-}
-
-.play-icon{
-  display: inline-block;
-  width: 100px;
-  height: 100px;
-  cursor: pointer;
-}
-
-.hotspot-wrapper {
-  width: 100%;
+.scene-15{
   height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 0;
-  margin: 0;
-  z-index: 1000;
-  overflow: hidden;
-  background-color: #000;
 
-  video {
+  .horta-ccsp {
+    position: absolute;
     height: 100%;
     width: 100%;
+    img {
+      width: 100%;
+    }
   }
 
-  .close {
-    color: #FFF;
-    font-size: 30px;
+  .image-quote {
+    opacity: 1;
+    text-align: right;
     position: absolute;
+    top: 30%;
     right: 2%;
-    cursor: pointer;
-    display:none;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    font-size: 40px;
-    background-color: rgba(100,100,100,0.7);
-    top: 2%;
-    border-radius: 4px;
-    box-shadow: 1px 1px 10px 1px #000;
   }
 }
 
-.hotspot-wrapper:hover .close{
-  display: block;
+.scene-16{
+  .alecrim {
+    width: 33.33%;
+    height: 100%;
+    position: absolute;
+    left:0;
+    top:-101%;
+    background-color: rgba(0,0,0,0.2);
+
+     img {
+      width: 100%;
+     }
+  }
+
+  .tomate{
+    width: 33.33%;
+    height: 100%;
+    position: absolute;
+    left:33.33%;
+    top:-101%;
+    background-color: rgba(0,0,0,0.2);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .camomila {
+    width: 33.33%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top:-101%;
+    background-color: rgba(0, 0, 0, 0.2);
+      
+      img {
+        width: 100%;
+        height: auto;
+      }
+  }
+
 }
+
 
