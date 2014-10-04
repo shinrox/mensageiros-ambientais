@@ -1,14 +1,13 @@
 window.API = {}
 API.videos = {}
 API.hotspotOn = false
-API.playPauseVideo = (id, play)->
-  video = API.videos["v" + id]
-  return if !video
-  if play and video.paused
-    video.play()
+API.playPauseMedia = (media, play)->
+  return if !media
+  if play and media.paused
+    media.play()
   else if !play
-    if !video.paused
-      video.pause()
+    if !media.paused
+      media.pause()
 
 API.pauseAll = ()->
   def = new $.Deferred();
@@ -109,8 +108,10 @@ Pace.on 'hide', ->
     v3: $(".scene-3 video")[0]
     v7: $(".scene-7 video")[0]
     v9: $(".scene-9 video")[0]
-    v13: $(".scene-13 video")[0]
-    v14: $(".scene-14 video")[0]
+
+  API.audios =
+    a2: $(".scene-2 audio")[0]
+    a13: $(".scene-13 audio")[0]
 
 
 
@@ -118,52 +119,44 @@ Pace.on 'hide', ->
     smoothScrolling: true
     smoothScrollingDuration: 1000
     render: (data)->
-      # return API.playPauseVideo(13, data.curTop >= 60500 and data.curTop <= 68500);
+      # return API.playPauseMedia(13, data.curTop >= 60500 and data.curTop <= 68500);
       
       if data.curTop >= 0 and data.curTop <= 1500
-        API.playPauseVideo(1, true)
+        API.playPauseMedia(API.videos.v1, true)
       else
-        API.playPauseVideo(1, false)
+        API.playPauseMedia(API.videos.v1, false)
 
-      if data.curTop >= 1300 and data.curTop <= 22000
-        $(".scene-2 audio")[0].play()
-
-        API.playPauseVideo(2, data.curTop <= 4500)
+      if data.curTop >= 1300 and data.curTop <= 20000
+        API.playPauseMedia(API.audios.a2, true)
+        API.playPauseMedia(API.videos.v2, data.curTop <= 4500)
       else
-        API.playPauseVideo(2, false)
-        
-        $(".scene-2 audio")[0].pause()
+        API.playPauseMedia(API.audios.a2, false)
+        API.playPauseMedia(API.videos.v2, false)
 
       if data.curTop >= 4000 and data.curTop <= 10100
-        API.playPauseVideo(3, true)
+        API.playPauseMedia(API.videos.v3, true)
         
       else
-        API.playPauseVideo(3, false)
+        API.playPauseMedia(API.videos.v3, false)
 
-      if data.curTop >= 20000 and data.curTop <= 27500
-        API.playPauseVideo(7, true)
+      if data.curTop >= 22000 and data.curTop <= 27500
+        API.playPauseMedia(API.videos.v7, true)
         
       else
-        API.playPauseVideo(7, false)
+        API.playPauseMedia(API.videos.v7, false)
 
-      if data.curTop >= 33000 and data.curTop <= 40100
-        API.playPauseVideo(9, true)
+      if data.curTop >= 33000 and data.curTop <= 50100
+        API.playPauseMedia(API.videos.v9, true)
         
       else
-        API.playPauseVideo(9, false)
+        API.playPauseMedia(API.videos.v9, false)
 
-      if data.curTop >= 60500 and data.curTop <= 67500
-        API.playPauseVideo(13, true)
+      if data.curTop >= 60500 and data.curTop <= 72000
+        API.playPauseMedia(API.audios.a13, true)
         
       else
-        API.playPauseVideo(13, false)
+        API.playPauseMedia(API.audios.a13, false)
 
-      if data.curTop > 67500 and data.curTop <= 69000
-        API.playPauseVideo(14, true)
-        
-      else
-        API.playPauseVideo(14, false)
-        
   })
   
 
