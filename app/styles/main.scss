@@ -713,4 +713,75 @@ video {
 
 }
 
+.scene-17 {
+  height: 100%;
 
+  .intro {
+    height: 100%;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .horizontal {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    width: 100%;
+    .image-wrapper {
+      height: 33.333%;
+      width: 100%;
+
+
+      img {
+        width: 100%;
+        vertical-align: middle;
+      }
+
+    }
+  }
+
+  .horizontal.grupo-3 {
+    .image-wrapper {
+      height: 50%;
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+
+    }
+  }
+}
+
+
+.scene-18{
+  height: 100%;
+
+  .hortalicas {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+}
+
+.scene-2-1{
+  height: 100%;
+
+  .eldorado {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    transform-origin: 50% 10%;
+    img {
+      height: 100%;
+    }
+  }
+
+}

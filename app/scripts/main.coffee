@@ -1,13 +1,15 @@
 window.API = {}
 API.videos = {}
 API.hotspotOn = false
-API.playPauseMedia = (media, play)->
+API.pauseMedia = (media)->
   return if !media
-  if play and media.paused
+  if !media.paused
+    media.pause()
+
+API.playMedia = (media)->
+  return if !media
+  if media.paused
     media.play()
-  else if !play
-    if !media.paused
-      media.pause()
 
 API.pauseAll = ()->
   def = new $.Deferred();
@@ -112,8 +114,15 @@ Pace.on 'hide', ->
   API.audios =
     a2: $(".scene-2 audio")[0]
     a13: $(".scene-13 audio")[0]
+    a2_1: $(".scene-2-1 audio")[0]
 
+  for own key, video of API.videos
+    video.onended = ()->
+      @alreadyPlayed = true
 
+  for own key, audio of API.audios
+    audio.onended = ()->
+      @alreadyPlayed = true
 
   API.skrollr = skrollr.init({
     smoothScrolling: true
@@ -122,41 +131,57 @@ Pace.on 'hide', ->
       # return API.playPauseMedia(13, data.curTop >= 60500 and data.curTop <= 68500);
       
       if data.curTop >= 0 and data.curTop <= 1500
-        API.playPauseMedia(API.videos.v1, true)
+        API.playMedia(API.videos.v1)
+      
       else
-        API.playPauseMedia(API.videos.v1, false)
-
+        API.pauseMedia(API.videos.v1)
+      
       if data.curTop >= 1300 and data.curTop <= 20000
-        API.playPauseMedia(API.audios.a2, true)
-        API.playPauseMedia(API.videos.v2, data.curTop <= 4500)
+        if data.curTop <= 4500
+          API.playMedia(API.videos.v2)
+
+        if !API.audios.a2.alreadyPlayed
+          API.playMedia(API.audios.a2)
+
       else
-        API.playPauseMedia(API.audios.a2, false)
-        API.playPauseMedia(API.videos.v2, false)
+        API.pauseMedia(API.audios.a2)
+        API.pauseMedia(API.videos.v2)
 
       if data.curTop >= 4000 and data.curTop <= 10100
-        API.playPauseMedia(API.videos.v3, true)
-        
+        API.playMedia(API.videos.v3)
       else
-        API.playPauseMedia(API.videos.v3, false)
+        API.pauseMedia(API.videos.v3)
 
-      if data.curTop >= 22000 and data.curTop <= 27500
-        API.playPauseMedia(API.videos.v7, true)
-        
-      else
-        API.playPauseMedia(API.videos.v7, false)
+      if !API.videos.v7.alreadyPlayed
+        if data.curTop >= 22000 and data.curTop <= 27500
+          API.playMedia(API.videos.v7)
+          
+        else
+          API.pauseMedia(API.videos.v7)
 
-      if data.curTop >= 33000 and data.curTop <= 50100
-        API.playPauseMedia(API.videos.v9, true)
-        
-      else
-        API.playPauseMedia(API.videos.v9, false)
+      if !API.videos.v9.alreadyPlayed
+        if data.curTop >= 33000 and data.curTop <= 50100
+          API.playMedia(API.videos.v9)
+        else
+          API.pauseMedia(API.videos.v9)
 
       if data.curTop >= 60500 and data.curTop <= 72000
-        API.playPauseMedia(API.audios.a13, true)
+        API.playMedia(API.audios.a13)
         
       else
-        API.playPauseMedia(API.audios.a13, false)
+        API.pauseMedia(API.audios.a13)
 
+      # if !API.videos.v17.alreadyPlayed
+      #   if data.curTop >= 84300 and data.curTop <= 100400
+      #     API.playMedia(API.videos.v17)
+      #   else
+      #     API.pauseMedia(API.videos.v17)
+
+      if data.curTop >= 100700 and data.curTop <= 108000
+        API.playMedia(API.audios.a2_1)
+        
+      else
+        API.pauseMedia(API.audios.a2_1)
   })
   
 
