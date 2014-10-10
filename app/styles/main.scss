@@ -785,3 +785,126 @@ video {
   }
 
 }
+
+.scene-2-2{
+  height: 100%;
+
+  .hortalicas, .residuos {
+    width: 100%;
+    height: 100%;
+    img {
+      height: 100%;
+    }
+  }
+
+  .residuos{
+    position: absolute;
+    top: 100%;
+  }
+
+  .group {
+    width: 100%;
+    height: 100%;
+    img {
+      transform-origin: 50% 50%;
+      height: 50%;
+      width: 50%;
+      float: left;
+    }
+  }
+
+}
+
+.scene-2-5{
+  height: 100%;
+  
+  .fundo {
+    height: 100%;
+    img{
+      height: 100%;
+
+    }
+  }
+
+  .sergio-nagai {
+    height: 100%;
+    position: absolute;
+    top: 0;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .image-quote, .image-hotspot {
+    position: absolute;
+    bottom:0%;
+    width: 100%;
+    opacity: 1;
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .image-hotspot{
+    height: auto;
+    padding: 5px 20px;
+    line-height: 100px;
+    
+    img.icon-play{
+      cursor: pointer;
+      height: 80px;
+      width: 80px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+  }
+
+  p, h1.headline {
+    margin-left: 20px;
+    line-height: 50px;
+  }
+
+  .headline {
+    font: 700 3.8rem/1.2 'Asul',Arial,sans-serif;
+  }
+  
+}
+
+.scene-2-6{
+  height: 100%;
+  
+  .fundo {
+    height: 100%;
+    img{
+      height: 100%;
+
+    }
+  }
+
+  .miriam-reis {
+    height: 100%;
+    position: absolute;
+    top: 0;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .image-quote, .image-hotspot {
+    position: absolute;
+    bottom:0%;
+    width: 100%;
+    opacity: 1;
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  p, h1.headline {
+    margin-left: 20px;
+    line-height: 50px;
+  }
+
+  .headline {
+    font: 700 3.8rem/1.2 'Asul',Arial,sans-serif;
+  }
+  
+}

@@ -171,12 +171,6 @@ Pace.on 'hide', ->
       else
         API.pauseMedia(API.audios.a13)
 
-      # if !API.videos.v17.alreadyPlayed
-      #   if data.curTop >= 84300 and data.curTop <= 100400
-      #     API.playMedia(API.videos.v17)
-      #   else
-      #     API.pauseMedia(API.videos.v17)
-
       if data.curTop >= 106700
         API.playMedia(API.audios.a2_1)
         
