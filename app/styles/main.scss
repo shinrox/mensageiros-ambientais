@@ -281,7 +281,7 @@ video {
   z-index: 6;
 }
 
-.scene-5 {
+.scene-5, .scene-8 {
   z-index: 7;
 }
 
@@ -451,18 +451,19 @@ video {
 
 .scene-8 {
   height: 100%;
+  width: 100%;
   overflow: hidden;
 
   .image-wrapper.flor {
+    width: 100%;
+    text-align: center;
     height: 100%;
-    border-right: 2px solid #FFF;
-    border-left: 2px solid #FFF;
+    // border-right: 2px solid #FFF;
+    // border-left: 2px solid #FFF;
 
     img {
       height: 100%;
       width: auto;
-      position: absolute;
-      right: 0;
     }
   }
 }
@@ -778,7 +779,7 @@ video {
     width: 100%;
     position: absolute;
     height: 100%;
-    transform-origin: 50% 10%;
+    transform-origin: 50% 50%;
     img {
       height: 100%;
     }
@@ -896,6 +897,71 @@ video {
     width: 100%;
     opacity: 1;
     background-color: rgba(0,0,0,0.8);
+  }
+
+  p, h1.headline {
+    margin-left: 20px;
+    line-height: 50px;
+  }
+
+  .headline {
+    font: 700 3.8rem/1.2 'Asul',Arial,sans-serif;
+  }
+  
+}
+
+.scene-2-7 {
+
+  video {
+    height: 100%;
+    width: auto;
+  }
+}
+
+
+
+
+.scene-2-11{
+  height: 100%;
+  
+  .fundo {
+    height: 100%;
+    img{
+      height: 100%;
+
+    }
+  }
+
+  .rui-signori {
+    height: 100%;
+    position: absolute;
+    top: 0;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .image-quote, .image-hotspot {
+    position: absolute;
+    bottom:0%;
+    width: 100%;
+    opacity: 1;
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .image-hotspot{
+    height: auto;
+    padding: 5px 20px;
+    line-height: 100px;
+    
+    img.icon-play{
+      cursor: pointer;
+      height: 80px;
+      width: 80px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
   }
 
   p, h1.headline {

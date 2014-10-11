@@ -102,6 +102,125 @@ $ ()->
   API.setSize()
 
 
+API.events =
+  data_startintro: (dir)->
+    API.playMedia(API.videos.v1)
+
+  data1700: (dir)->
+    if dir is 'down'
+      API.playMedia(API.videos.v2)
+      API.playMedia(API.audios.a2)
+    else
+      API.pauseMedia(API.videos.v2)
+      API.pauseMedia(API.audios.a2)
+
+  data_endintro: (dir)->
+    if dir is 'down'
+      API.pauseMedia(API.videos.v1)
+    else
+      API.playMedia(API.videos.v1)
+
+  data4000: (dir)->
+    if dir is 'down'
+      API.playMedia(API.videos.v3)
+    else
+      API.pauseMedia(API.videos.v3)
+
+  data4500: (dir)->
+    if dir is 'up'
+      API.playMedia(API.videos.v2)
+    else
+      API.pauseMedia(API.videos.v2)
+
+  data10100: (dir)->
+    API.pauseMedia(API.videos.v3)
+
+  data20000: (dir)->
+    if dir is 'down'
+      API.pauseMedia(API.audios.a2)
+    else
+      if !API.audios.a2.alreadyPlayed
+        API.playMedia(API.audios.a2)
+
+  data22000: (dir)->
+    if dir is 'down'
+      API.playMedia(API.videos.v7)
+    else
+      API.pauseMedia(API.videos.v7)
+
+  data27500: (dir)->
+    API.pauseMedia(API.videos.v7)
+
+
+  data33000: (dir)->
+    if dir is 'down'
+      API.playMedia(API.videos.v9)
+    else
+      API.pauseMedia(API.videos.v9)
+  
+  data50100: (dir)->
+    API.pauseMedia(API.videos.v9)
+
+  data60500: (dir)->
+    if dir is 'down'
+      API.playMedia(API.audios.a13)
+    else
+      API.pauseMedia(API.audios.a13)
+
+  data72000: (dir)->
+    if dir is 'down'
+      API.pauseMedia(API.audios.a13)
+    else
+      API.playMedia(API.audios.a13)
+
+  data101400: (dir)->
+    if dir is 'down'
+      API.playMedia(API.audios.a2_1)
+    else
+      API.pauseMedia(API.audios.a2_1)
+
+  data113400: (dir)->
+    if dir is 'down'
+      API.pauseMedia(API.audios.a2_1)
+    else
+      API.playMedia(API.audios.a2_1)
+
+  data119800: (dir)->
+    if dir is 'down'
+      API.playMedia(API.audios.a2_6)
+    else
+      API.pauseMedia(API.audios.a2_6)
+
+  data123200: (dir)->
+    if dir is 'down'
+      API.pauseMedia(API.audios.a2_6)
+    else
+      API.playMedia(API.audios.a2_6)
+
+  data123300: (dir)->
+    if dir is 'down'
+      API.playMedia(API.videos.v2_7)
+    else
+      API.pauseMedia(API.videos.v2_7)
+
+  data126300: (dir)->
+    if dir is 'down'
+      API.pauseMedia(API.videos.v2_7)
+    else
+      API.playMedia(API.videos.v2_7)
+
+  data129300: (dir)->
+    if dir is 'down'
+      API.playMedia(API.videos.v2_9)
+    else
+      API.pauseMedia(API.videos.v2_9)
+
+  data132300: (dir)->
+    if dir is 'down'
+      API.pauseMedia(API.videos.v2_9)
+    else
+      API.playMedia(API.videos.v2_9)
+
 Pace.on 'hide', ->
   $("#loading").fadeOut()
   API.videos =
@@ -110,11 +229,14 @@ Pace.on 'hide', ->
     v3: $(".scene-3 video")[0]
     v7: $(".scene-7 video")[0]
     v9: $(".scene-9 video")[0]
+    v2_7: $(".scene-2-7 video")[0]
+    v2_9: $(".scene-2-9 video")[0]
 
   API.audios =
     a2: $(".scene-2 audio")[0]
     a13: $(".scene-13 audio")[0]
     a2_1: $(".scene-2-1 audio")[0]
+    a2_6: $(".scene-2-6 audio")[0]
 
   for own key, video of API.videos
     video.onended = ()->
@@ -127,55 +249,19 @@ Pace.on 'hide', ->
   API.skrollr = skrollr.init({
     smoothScrolling: true
     smoothScrollingDuration: 1000
-    render: (data)->
-      # return API.playPauseMedia(13, data.curTop >= 60500 and data.curTop <= 68500);
-      
-      if data.curTop >= 0 and data.curTop <= 1500
-        API.playMedia(API.videos.v1)
-      
-      else
-        API.pauseMedia(API.videos.v1)
-      
-      if data.curTop >= 1300 and data.curTop <= 20000
-        if data.curTop <= 4500
-          API.playMedia(API.videos.v2)
+    constants:
+      startintro: 0
+      endintro: 1800
+    keyframe: (element, name, dir)->
+      fn = API.events[name]
 
-        if !API.audios.a2.alreadyPlayed
-          API.playMedia(API.audios.a2)
+      if fn?
+        console.log "Executando #{name}, #{dir}"
+        fn(dir)
 
       else
-        API.pauseMedia(API.audios.a2)
-        API.pauseMedia(API.videos.v2)
+        console.log "definir função para evento #{name}"
 
-      if data.curTop >= 4000 and data.curTop <= 10100
-        API.playMedia(API.videos.v3)
-      else
-        API.pauseMedia(API.videos.v3)
-
-      if !API.videos.v7.alreadyPlayed
-        if data.curTop >= 22000 and data.curTop <= 27500
-          API.playMedia(API.videos.v7)
-          
-        else
-          API.pauseMedia(API.videos.v7)
-
-      if !API.videos.v9.alreadyPlayed
-        if data.curTop >= 33000 and data.curTop <= 50100
-          API.playMedia(API.videos.v9)
-        else
-          API.pauseMedia(API.videos.v9)
-
-      if data.curTop >= 60500 and data.curTop <= 72000
-        API.playMedia(API.audios.a13)
-        
-      else
-        API.pauseMedia(API.audios.a13)
-
-      if data.curTop >= 106700
-        API.playMedia(API.audios.a2_1)
-        
-      else
-        API.pauseMedia(API.audios.a2_1)
   })
   
 
