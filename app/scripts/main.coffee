@@ -334,7 +334,7 @@ Pace.on 'hide', ->
       startrecycling: 140300
       endrecycling: 145200
       startreciclamundo: 146000
-      endreciclamundo: 148800
+      endreciclamundo: 154000
     keyframe: (element, name, dir)->
       fn = API.events[name]
 
