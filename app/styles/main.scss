@@ -1136,3 +1136,12 @@ video {
     font: 700 3.8rem/1.2 'Asul',Arial,sans-serif;
   }
 }
+
+.image-wrapper.fundo {
+  height: 100%;
+  width: 100%;
+  
+  img {
+    height: 100%;
+  }
+}
