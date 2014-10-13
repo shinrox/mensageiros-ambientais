@@ -1069,3 +1069,70 @@ video {
 
   }
 }
+
+.scene-3-1 {
+  .image-wrapper {
+    width: 100%;
+    height: 100%;
+
+    img {
+      height: 100%;
+    }
+
+  }
+}
+
+.scene-3-2, .scene-3-8 {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  .image-wrapper {
+    width: 100%;
+    text-align: center;
+    height: 100%;
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+}
+
+.scene-3-3 {
+  video {
+    height: 100%;
+  }
+
+}
+
+.scene-3-5 {
+  .group {
+    width: 100%;
+    height: 100%;
+    img {
+      height: 100%;
+      width: 33.3333%;
+      float: left;
+    }
+  }
+}
+
+.scene-3-9 {
+  .image-quote{
+    position: absolute;
+    bottom:0%;
+    width: 100%;
+    opacity: 1;
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  p, h1.headline {
+    margin-left: 20px;
+    line-height: 50px;
+  }
+
+  .headline {
+    font: 700 3.8rem/1.2 'Asul',Arial,sans-serif;
+  }
+}

@@ -85,6 +85,7 @@ onResize = do ->
   lastExecution = new Date(new Date().getTime() - throttle)
 
   executeAction = () ->
+    return if !API.skrollr?
     API.setSize()
     API.skrollr.refresh($(".theme *"))
 
@@ -278,6 +279,32 @@ API.events =
       if !API.videos.v2_9.alreadyPlayed
         API.playMedia(API.videos.v2_14)
 
+  data_startong: (dir)->
+    if dir is 'down'
+      API.playMedia(API.videos.v3_3)
+    else
+      API.pauseMedia(API.videos.v3_3)
+
+  data_endong: (dir)->
+    if dir is 'down'
+      API.pauseMedia(API.videos.v3_3)
+    else
+      if !API.videos.v3_3.alreadyPlayed
+        API.playMedia(API.videos.v3_3)
+
+  data_startgenival: (dir)->
+    if dir is 'down'
+      API.playMedia(API.videos.v3_6)
+    else
+      API.pauseMedia(API.videos.v3_6)
+
+  data_endgenival: (dir)->
+    if dir is 'down'
+      API.pauseMedia(API.videos.v3_6)
+    else
+      if !API.videos.v3_6.alreadyPlayed
+        API.playMedia(API.videos.v3_6)
+
 Pace.on 'hide', ->
   $("#loading").fadeOut()
   API.videos =
@@ -290,6 +317,8 @@ Pace.on 'hide', ->
     v2_9: $(".scene-2-9 video")[0]
     v2_12: $(".scene-2-12 video")[0]
     v2_14: $(".scene-2-14 video")[0]
+    v3_3: $(".scene-3-3 video")[0]
+    v3_6: $(".scene-3-6 video")[0]
 
   API.audios =
     a2: $(".scene-2 audio")[0]
@@ -335,6 +364,10 @@ Pace.on 'hide', ->
       endrecycling: 145200
       startreciclamundo: 146000
       endreciclamundo: 154000
+      startong: 155100
+      endong: 162000
+      startgenival: 165500
+      endgenival: 170000
     keyframe: (element, name, dir)->
       fn = API.events[name]
 
