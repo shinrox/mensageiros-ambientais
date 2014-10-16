@@ -305,6 +305,25 @@ API.events =
       if !API.videos.v3_6.alreadyPlayed
         API.playMedia(API.videos.v3_6)
 
+  data_startcidadessemfome: (dir)->
+    if dir is 'down'
+      API.playMedia(API.videos.v3_10)
+    else
+      API.pauseMedia(API.videos.v3_10)
+
+  data_endcidadessemfome: (dir)->
+    if dir is 'down'
+      API.pauseMedia(API.videos.v3_10)
+    else
+      if !API.videos.v3_6.alreadyPlayed
+        API.playMedia(API.videos.v3_10)
+
+  data_startmariaejoaquim: (dir)->
+    if dir is 'down'
+      API.playMedia(API.videos.v3_14)
+    else
+      API.pauseMedia(API.videos.v3_14)
+      
 Pace.on 'hide', ->
   $("#loading").fadeOut()
   API.videos =
@@ -319,6 +338,8 @@ Pace.on 'hide', ->
     v2_14: $(".scene-2-14 video")[0]
     v3_3: $(".scene-3-3 video")[0]
     v3_6: $(".scene-3-6 video")[0]
+    v3_10: $(".scene-3-10 video")[0]
+    v3_14: $(".scene-3-14 video")[0]
 
   API.audios =
     a2: $(".scene-2 audio")[0]
@@ -329,6 +350,9 @@ Pace.on 'hide', ->
   for own key, video of API.videos
     video.onended = ()->
       @alreadyPlayed = true
+      s = @src
+      @src = ''
+      @src= s
 
   for own key, audio of API.audios
     audio.onended = ()->
@@ -368,13 +392,14 @@ Pace.on 'hide', ->
       endong: 162000
       startgenival: 165500
       endgenival: 170000
+      startcidadessemfome: 175000
+      endcidadessemfome: 181000
+      startmariaejoaquim: 189000
     keyframe: (element, name, dir)->
       fn = API.events[name]
 
       if fn?
-        console.log "Executando #{name}, #{dir}"
         fn(dir)
-
       else
         console.log "definir função para evento #{name}"
 
