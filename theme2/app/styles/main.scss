@@ -1,0 +1,820 @@
+@import "mixins.scss";
+
+html{
+  font-family: 'Asul', sans-serif;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  font-size: 7px;
+}
+html body{
+  font-size: 1.868em;
+}
+
+body {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  width: 100%;
+  color: #fff;
+  background-color: #000;
+  font: 2.8rem/1.5 'Quattrocento Sans',Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body > div {
+  position:fixed;
+  top:50%;
+  left:50%;
+  width:1144px;
+  height:643px;
+  margin-left: -572px;
+  margin-top: -321px;
+  background:transparent center no-repeat;
+  background-size:cover;
+}
+
+.quote, .quotes {
+  font: 400 3.9rem/1.2 'Cookie',sans-serif;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.from {
+  font: 400 3.2rem/1.2 'Asul',Arial,sans-serif;
+}
+
+.bl {
+  border-left: 1px solid #FFF;
+}
+
+.bt {
+  border-top: 1px solid #FFF;
+}
+
+.bb {
+  border-bottom: 1px solid #FFF;
+}
+
+.br {
+  border-right: 1px solid #FFF;
+}
+
+.loading {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top:0;
+  left: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+h1 {
+  margin: 0 0 .2em;
+  font: 700 4.8rem/1.2 'Asul',Arial,sans-serif;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.headline {
+  color: #fff;
+  text-shadow: 3px 2px 3px #000;
+}
+
+.bf{
+  @include absolute-center(450, 410);
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in-out;
+}
+
+.bf img{
+  position: absolute;
+  width: 220px;
+  height: auto;
+  top: 10px;
+  transform-style: preserve-3d;
+  perspective: 400px;
+}
+
+.bf img.lwing {
+  left: 0px;
+}
+
+.bf img.rwing {
+  right: 0px;
+}
+
+
+@-webkit-keyframes rflip {
+  from {
+    -webkit-transform: rotateY(0deg) skewY(0deg);
+  }
+  to {
+   -webkit-transform: rotateY(70deg) skewY(-10deg);
+  }
+}
+
+@-webkit-keyframes lflip {
+  from {
+    -webkit-transform: rotateY(0deg) skewY(0deg);
+  }
+  to {
+
+   -webkit-transform: rotateY(-70deg) skewY(10deg);
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes scrollBounce {
+  from {
+    bottom: 10px;
+  }
+  to {
+    bottom: 15px;
+  }
+}
+
+
+.bf img.lwing{
+  /*-webkit-transform: rotateY(-70deg) skewY(10deg);*/
+  -webkit-animation-name: lflip;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-transform-origin: 100% 50%;
+  -webkit-animation-timing-function: ease-in-out;
+}
+
+.bf img.rwing{
+  -webkit-animation-name: rflip;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-transform-origin: 0% 50%;
+  -webkit-animation-timing-function: ease-in-out;
+}
+
+.text{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #FFF;
+  text-align: center;
+  font-size: 2.5em;
+  width: 100%;
+  padding: 10px 0;
+  font-weight:700;
+  font-style: normal;
+  text-shadow: 2px 2px 2px #555;
+  text-transform: uppercase;
+} 
+
+p {
+  margin: 0;
+}
+
+
+.theme {
+  overflow: hidden;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+
+.video-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  .video-title{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+
+    top: 65%;
+    margin-top: -50px;
+    left: 5%;
+
+  }
+
+  video {
+    position: absolute;
+  }
+}
+
+.play-icon{
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.hotspot-wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  z-index: 1000;
+  overflow: hidden;
+  background-color: #000;
+
+  video {
+    height: 100%;
+    width: 100%;
+  }
+
+  .close {
+    color: #FFF;
+    font-size: 30px;
+    position: absolute;
+    right: 2%;
+    cursor: pointer;
+    display:none;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 40px;
+    background-color: rgba(100,100,100,0.7);
+    top: 2%;
+    border-radius: 4px;
+    box-shadow: 1px 1px 10px 1px #000;
+  }
+}
+
+.hotspot-wrapper:hover .close{
+  display: block;
+}
+
+
+.scene {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index:5;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+.scene-3{
+  z-index: 1;
+}
+
+
+.scene-5, .scene-10, .scene-16, .scene-6-1, .scene-6, .scene-2-13{
+  z-index: 6;
+}
+
+.scene-5, .scene-8 {
+  z-index: 7;
+}
+
+.scene-1 {
+  .image-wrapper {
+    transform-origin: 50% 50%;
+  }
+  
+  img {
+    height: 100%;
+    width: auto;
+  }
+
+  .scroll-indicator {
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    background-color: rgba(50,50,50,0.55);
+    font-size: 35px;
+    color: #FFF;
+    text-align: center;
+    line-height: 70px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -35px;
+    font-weight: bold;
+
+    -webkit-animation-name: scrollBounce;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-transform-origin: 100% 50%;
+    -webkit-animation-timing-function: ease-in-out;
+
+  }
+}
+
+.scene-2 {
+  border-top: 1px solid #FFF;
+
+  .pitanga {
+    width: 61%;
+    height: 50%;
+    position: absolute;
+    left:0;
+    top:0;
+    background-color: rgba(0,0,0,0.2);
+
+     img {
+      width: 100%;
+     }
+  }
+
+  .placa {
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    border-left: 1px solid #FFF;
+    right:0;
+    top:0;
+    background-color: rgba(0,0,0,0.2);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .abelha {
+    border-top: 1px solid #FFF;
+    width: 61%;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    video {
+      width: 100%;
+      height:auto;
+    }
+  }
+
+}
+
+.scene-3  {
+
+}
+
+.scene-4 {
+  border-left: 1px solid #FFF;
+  background: url("../images/theme1/scene4.jpg") no-repeat scroll center center transparent;
+  background-size: 100% auto;
+
+  .image-quote, .image-hotspot {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+  }
+
+  .image-quote {
+    top: 50%;
+    margin-top: -50px;    
+  }
+
+  .image-hotspot {
+    height:100px;
+    bottom: 0%;
+  }
+
+  .claudia-visoni {
+    opacity: 0
+  }
+
+  .image-hotspot{
+    height: auto;
+    padding: 5px 20px;
+    line-height: 100px;
+    
+    img.icon-play{
+      cursor: pointer;
+      height: 80px;
+      width: 80px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+  }
+
+  p, h1.headline {
+    margin-left: 20px;
+    line-height: 50px;
+  }
+
+  .headline {
+    font: 700 3.8rem/1.2 'Asul',Arial,sans-serif;
+  }
+
+  .image-wrapper img{
+    width: 100%;
+  }
+}
+
+.scene-5 {
+  height: 100%;
+  overflow: hidden;
+
+  .image-wrapper {
+    height: 100%;
+    box-shadow: 0px 0px 20px 3px #222;
+    float:right;
+    img {
+      height: 100%;
+    }
+  }
+}
+
+.scene-6 {
+  height: 100%;
+  overflow: hidden;
+
+  .image-wrapper.placa {
+    height: 100%;
+
+    img {
+      height: 100%;
+
+    }
+  }
+
+}
+
+.scene-6-1 {
+  height: 100%;
+  overflow: hidden;
+  -webkit-transform-origin: 10% 20%;
+
+  .image-wrapper.coruja {
+    height: 31.67701863354037%;
+    width: 16.171328671328672%;
+    position: absolute;
+    right: 10%;
+    top: 40%;
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+}
+
+.scene-7 {
+  border-bottom: 1px solid #FFF;
+}
+
+.scene-8 {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  .image-wrapper.flor {
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    // border-right: 2px solid #FFF;
+    // border-left: 2px solid #FFF;
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+}
+
+.scene-9 {
+
+}
+
+.scene-10 {
+
+  .borboleta {
+    width: 61%;
+    height: 50%;
+    position: absolute;
+    right:0;
+    top:0;
+    background-color: rgba(0,0,0,0.2);
+
+     img {
+      width: 100%;
+     }
+  }
+
+  .corrego{
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    left:0;
+    top:0;
+    background-color: rgba(0,0,0,0.2);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .pimenta {
+    width: 61%;
+    height: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+      
+      img {
+        width: 100%;
+        height: auto;
+      }
+  }
+
+}
+
+.scene-11 {
+
+  .image-quote {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+  }
+
+  .image-quote {
+    top: 50%;
+    margin-top: -50px;    
+  }
+
+  p{
+    margin-left: 20px;
+    line-height: 50px;
+  }
+
+  .headline {
+    font: 700 3.8rem/1.2 'Asul',Arial,sans-serif;
+  }
+
+  .image-wrapper img{
+    width: 100%;
+  }
+}
+
+.scene-12 {
+
+  .flor-rosa {
+    width: 33.33%;
+    height: 100%;
+    position: absolute;
+    left:0;
+    top:0;
+    background-color: rgba(0,0,0,0.2);
+
+     img {
+      width: 100%;
+     }
+  }
+
+  .arvore{
+    width: 33.33%;
+    height: 100%;
+    position: absolute;
+    left:33.33%;
+    top:0;
+    background-color: rgba(0,0,0,0.2);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .flor-amarela {
+    width: 33.33%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+      
+      img {
+        width: 100%;
+        height: auto;
+      }
+  }
+
+}
+
+.scene-13 {
+  .andrea-pesek, .panoramica {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+
+  .panoramica img{
+    position: absolute;
+    height: 100%;
+    width: auto;
+  }
+
+  .image-quote, .image-hotspot {
+    position: absolute;
+    bottom:0%;
+    width: 100%;
+    opacity: 1;
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .image-hotspot{
+    height: auto;
+    padding: 5px 20px;
+    line-height: 100px;
+    
+    img.icon-play{
+      cursor: pointer;
+      height: 80px;
+      width: 80px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+  }
+
+  p, h1.headline {
+    margin-left: 20px;
+    line-height: 50px;
+  }
+
+  .headline {
+    font: 700 3.8rem/1.2 'Asul',Arial,sans-serif;
+  }
+
+}
+
+.scene-14 {
+  .image-wrapper {
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    transform-origin: 50% 30%; 
+
+    img {
+      height: 100%;
+    }
+  }
+}
+
+.scene-15{
+  height: 100%;
+
+  .horta-ccsp {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+
+  .image-quote {
+    opacity: 1;
+    text-align: right;
+    position: absolute;
+    top: 30%;
+    right: 2%;
+  }
+}
+
+.scene-16{
+  .alecrim {
+    width: 33.33%;
+    height: 100%;
+    position: absolute;
+    left:0;
+    background-color: rgba(0,0,0,0.2);
+
+     img {
+      width: 100%;
+     }
+  }
+
+  .tomate{
+    width: 33.33%;
+    height: 100%;
+    position: absolute;
+    left:33.33%;
+    background-color: rgba(0,0,0,0.2);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .camomila {
+    width: 33.33%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+      
+      img {
+        width: 100%;
+        height: auto;
+      }
+  }
+
+}
+
+.scene-17 {
+  height: 100%;
+
+  .intro {
+    height: 100%;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .horizontal {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    width: 100%;
+    .image-wrapper {
+      height: 33.333%;
+      width: 100%;
+
+
+      img {
+        width: 100%;
+        vertical-align: middle;
+      }
+
+    }
+  }
+
+  .horizontal.grupo-3 {
+    .image-wrapper {
+      height: 50%;
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+
+    }
+  }
+}
+
+
+.scene-18{
+  height: 100%;
+
+  .hortalicas {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+}
+
+
+
+.image-wrapper.fundo {
+  height: 100%;
+  width: 100%;
+  
+  img {
+    height: 100%;
+  }
+}

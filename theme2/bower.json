@@ -1,0 +1,10 @@
+{
+  "name": "mensageiros-ambientais",
+  "private": true,
+  "dependencies": {
+    "jquery": "~1.11.1",
+    "modernizr": "~2.8.2",
+    "skrollr": "~0.6.26",
+    "imagesloaded": "~3.1.8"
+  }
+}
