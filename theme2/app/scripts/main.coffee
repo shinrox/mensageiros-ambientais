@@ -128,6 +128,81 @@ API.events =
   endaao: (el, dir)->
     API.playPauseMedia(el, dir is 'up')
 
+  startcomerciantes: (el, dir)->
+    API.playPauseMedia(el, dir is 'down')
+
+  endcomerciantes: (el, dir)->
+    API.playPauseMedia(el, dir is 'up')
+
+  startrenata: (el, dir)->
+    API.playPauseMedia(el, dir is 'down')
+
+  endrenata: (el, dir)->
+    API.playPauseMedia(el, dir is 'up')
+
+  startluciana: (el, dir)->
+    API.playPauseMedia(el, dir is 'down')
+
+  endluciana: (el, dir)->
+    API.playPauseMedia(el, dir is 'up')
+
+  startovos: (el, dir)->
+    API.playPauseMedia(el, dir is 'down')
+
+  endovos: (el, dir)->
+    API.playPauseMedia(el, dir is 'up')
+
+  startprodutos: (el, dir)->
+    API.playPauseMedia(el, dir is 'down')
+
+  endprodutos: (el, dir)->
+    API.playPauseMedia(el, dir is 'up')
+
+  startadenilson: (el, dir)->
+    API.playPauseMedia(el, dir is 'down')
+
+  endadenilson: (el, dir)->
+    API.playPauseMedia(el, dir is 'up')
+
+  startantonio: (el, dir)->
+    API.playPauseMedia(el, dir is 'down')
+
+  endantonio: (el, dir)->
+    API.playPauseMedia(el, dir is 'up')
+
+  starthilda: (el, dir)->
+    API.playPauseMedia(el, dir is 'down')
+
+  endhilda: (el, dir)->
+    API.playPauseMedia(el, dir is 'up')
+
+  startmauro: (el, dir)->
+    API.playPauseMedia(el, dir is 'down')
+
+  endmauro: (el, dir)->
+    API.playPauseMedia(el, dir is 'up')
+
+  startthais: (el, dir)->
+    API.playPauseMedia(el, dir is 'down')
+
+  endthais: (el, dir)->
+    API.playPauseMedia(el, dir is 'up')
+
+  startsusana: (el, dir)->
+    API.playPauseMedia(el, dir is 'down')
+
+  endsusana: (el, dir)->
+    API.playPauseMedia(el, dir is 'up')
+
+  startfeira: (el, dir)->
+    API.playPauseMedia(el, dir is 'down')
+
+  endfeira: (el, dir)->
+    API.playPauseMedia(el, dir is 'up')
+
+  startbiel: (el, dir)->
+    API.playPauseMedia(el, dir is 'down')
+
 
 API.scenes = do->
   scenes = {}
@@ -156,12 +231,33 @@ Pace.on 'hide', ->
     smoothScrolling: true
     smoothScrollingDuration: 1000
     constants:
-      startleave1: 2000
-      endleave1: 3000
-      startleave2: 5000
-      endleave2: 6000
       startaao: 0
       endaao: 3000
+      startcomerciantes: 10000
+      endcomerciantes: 15000
+      startrenata: 18000
+      endrenata: 22000
+      startluciana: 26000
+      endluciana: 30000
+      startovos: 31200
+      endovos: 35000
+      startprodutos: 40200
+      endprodutos: 45000
+      startadenilson: 46200
+      endadenilson: 51000
+      startantonio: 51000
+      endantonio: 56000
+      starthilda: 59200
+      endhilda: 65000
+      startmauro: 66200
+      endmauro: 72000
+      startthais: 87200
+      endthais: 93000
+      startsusana: 95500
+      endsusana: 103000
+      startfeira: 95500
+      endfeira: 112000
+      startbiel: 112000
     keyframe: (el, name, dir)->
       fnName = name.split("_")[1]
       fn = API.events[fnName]
@@ -189,4 +285,4 @@ Pace.on 'hide', ->
     
 
 $(window).on "unload", ()->
-  window.scrollTo(0,0)
+  # window.scrollTo(0,0)
