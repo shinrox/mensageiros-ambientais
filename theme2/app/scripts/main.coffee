@@ -22,7 +22,7 @@ API.playPauseMedia = (media, play)->
   if play and media.paused
     API.playMedia(media)
   else if !play and !media.paused
-    API.playMedia(media)
+    API.pauseMedia(media)
 
 
 API.resumePlaying = ()->
