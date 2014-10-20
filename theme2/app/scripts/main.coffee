@@ -6,6 +6,10 @@ API.pauseMedia = (media)->
   return if !media
   if !media.paused
     media.pause()
+    s = media.src
+    media.src = ""
+    media.load()
+    media.src = s
 
 API.playMedia = (media)->
   return if !media
@@ -16,10 +20,9 @@ API.playMedia = (media)->
 API.playPauseMedia = (media, play)->
   return if !media
   if play and media.paused
-      media.alreadyPlayed = false
-      media.play()
+    API.playMedia(media)
   else if !play and !media.paused
-    media.pause()
+    API.playMedia(media)
 
 
 API.resumePlaying = ()->
@@ -285,4 +288,4 @@ Pace.on 'hide', ->
     
 
 $(window).on "unload", ()->
-  # window.scrollTo(0,0)
+  window.scrollTo(0,0)
