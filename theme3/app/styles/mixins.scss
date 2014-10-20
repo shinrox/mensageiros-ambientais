@@ -1,0 +1,36 @@
+$base-img-url: "../images/";
+
+@mixin bg-pos($x, $y) {
+  background-position: $x $y;
+}
+
+@mixin bg-centered($img) {
+  background: url("#{$base-img-url}#{$img}") no-repeat scroll center center transparent;
+}
+
+@mixin ie-behavior{
+  behavior: url(http://sunflower2.digitalpages.com.br/PIE.htc);
+}
+
+@mixin t-bg($color){
+  background: url("#{$base-img-url}t_bg_#{$color}.png") repeat scroll 0 0 transparent;
+}
+
+@mixin pos-absolute($left, $top, $right, $bottom){
+  position: absolute;
+  left: $left;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+
+}
+
+@mixin absolute-center($width, $height){
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: $width + px;
+  height: $height + px;
+  margin-left: -($width/2) + px;
+  margin-top: -($height/2) + px;
+}
