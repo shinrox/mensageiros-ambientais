@@ -6,10 +6,11 @@ API.pauseMedia = (media)->
   return if !media
   if !media.paused
     media.pause()
-    s = media.src
-    media.src = ""
-    media.load()
-    media.src = s
+    # source = $(media).find('source')[0]
+    # s = source.src
+    # media.src = ""
+    # media.load()
+    # media.src = s
 
 API.playMedia = (media)->
   return if !media

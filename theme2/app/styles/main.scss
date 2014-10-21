@@ -520,11 +520,22 @@ p, .headline {
     right:0;
   }
 
+  .crop {
+    width: 100%;
+    height: 100%;
+
+    img {
+      height: 100%;
+      float: right;
+    }
+  }
+
 }
 
 .scene-12 {
+  
 
-
+  
 }
 
 .scene-13 {
