@@ -161,6 +161,39 @@ API.events =
   endcazita: (el, dir)->
     API.playPauseMedia(el, dir is 'up')
 
+  startdaniela: (el, dir)->
+    API.playPauseMedia(el, dir is 'down')
+    
+  enddaniela: (el, dir)->
+    API.playPauseMedia(el, dir is 'up')
+
+  startfoodrev: (el, dir)->
+    API.playPauseMedia(el, dir is 'down')
+    
+  endfoodrev: (el, dir)->
+    API.playPauseMedia(el, dir is 'up')
+
+  startseplantar: (el, dir)->
+    API.playPauseMedia(el, dir is 'down')
+    
+  endseplantar: (el, dir)->
+    API.playPauseMedia(el, dir is 'up')
+
+  startdesperdicio: (el, dir)->
+    API.playPauseMedia(el, dir is 'down')
+    
+  enddesperdicio: (el, dir)->
+    API.playPauseMedia(el, dir is 'up')
+
+  starttangerina: (el, dir)->
+    API.playPauseMedia(el, dir is 'down')
+    
+  endtangerina: (el, dir)->
+    API.playPauseMedia(el, dir is 'up')
+
+  startpomba: (el, dir)->
+    API.playPauseMedia(el, dir is 'down')
+
 API.scenes = do->
   scenes = {}
   dur = 4500
@@ -200,6 +233,17 @@ Pace.on 'hide', ->
       endmsgcazita: 42000
       startcazita: 45000
       endcazita: 51000
+      startdaniela: 55000
+      enddaniela: 61000
+      startfoodrev: 63000
+      endfoodrev: 69000
+      startseplantar: 71000
+      endseplantar: 77000
+      startdesperdicio: 79000
+      enddesperdicio: 85000
+      starttangerina: 92000
+      endtangerina: 98000
+      startpomba: 102000
     keyframe: (el, name, dir)->
       fnName = name.split("_")[1]
       fn = API.events[fnName]
