@@ -137,6 +137,30 @@ API.events =
   endalimentacao: (el, dir)->
     API.playPauseMedia(el, dir is 'up')
 
+  startbandeira: (el, dir)->
+    API.playPauseMedia(el, dir is 'down')
+
+  endbandeira: (el, dir)->
+    API.playPauseMedia(el, dir is 'up')
+
+  startoquealimenta: (el, dir)->
+    API.playPauseMedia(el, dir is 'down')
+
+  endoquealimenta: (el, dir)->
+    API.playPauseMedia(el, dir is 'up')
+
+  startmsgcazita: (el, dir)->
+    API.playPauseMedia(el, dir is 'down')
+
+  endmsgcazita: (el, dir)->
+    API.playPauseMedia(el, dir is 'up')
+
+  startcazita: (el, dir)->
+    API.playPauseMedia(el, dir is 'down')
+    
+  endcazita: (el, dir)->
+    API.playPauseMedia(el, dir is 'up')
+
 API.scenes = do->
   scenes = {}
   dur = 4500
@@ -167,7 +191,15 @@ Pace.on 'hide', ->
       startintro: 0
       endintro: 3000
       startalimentacao:7000
-      endalimentacao: 12000
+      endalimentacao: 11500
+      startbandeira: 11600
+      endbandeira: 16000
+      startoquealimenta: 27000
+      endoquealimenta: 32000
+      startmsgcazita: 37000
+      endmsgcazita: 42000
+      startcazita: 45000
+      endcazita: 51000
     keyframe: (el, name, dir)->
       fnName = name.split("_")[1]
       fn = API.events[fnName]
