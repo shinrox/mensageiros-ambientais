@@ -302,10 +302,18 @@ p, .headline {
   height: 100%;
   overflow: hidden;
   z-index:5;
+
+  video {
+    height: 100%;
+  }
 }
 
 .wrapper {
   overflow: hidden;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
 }
 
 .scene-1 {
@@ -361,10 +369,30 @@ p, .headline {
 
 .scene-2 {
 
+  .fundo {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
   .text-wrapper {
     position: absolute;
-    top: 30%;
-    left: 2%;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+
+    p {
+      margin-top: 5%;
+    }
+
+    .font{
+      text-align: right;
+      position: absolute;
+      bottom: 5%;
+      right: 5%;
+      margin: 0;
+    }
   }
 
   .frase {
@@ -405,48 +433,106 @@ p, .headline {
     top: 30%;
     left: 2%;
   }
+
+  video {
+    height: 100%;
+  }
 }
 
 .scene-4 {
-  .image-wrapper {
-    height: 100%;
-    box-shadow: 0px 0px 20px 3px #222;
-    text-align: center;
+
+  .text-wrapper{
+    position: absolute;
     width: 100%;
-    img {
-      height: 100%;
-    }
+    height: 100px;
+
+    top: 65%;
+    margin-top: -50px;
+    left: 5%;
+
   }
 }
 
 .scene-5 {
-  .image-wrapper {
-    height: 100%;
-    box-shadow: 0px 0px 20px 3px #222;
-    float:right;
-    img {
-      height: 100%;
-    }
+  .wrapper {
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    text-align: center;
   }
 }
 
 .scene-6 {
+  .logo-wrapper {
+    width: 83%;
+    height: 55%;
+    right: 0;
 
+    .logo {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      
+      img {
+        position: absolute;
+        right: 0;
+      }
+    }
+
+    .text-wrapper{
+      width: 60%;
+      display:table;
+      padding: 0 1.5%;
+      p{
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .headline{
+    color: #000;
+    text-shadow: 3px 2px 3px #FFF;
+  }
+
+  .text-bottom {
+
+    position: absolute;
+    bottom: 0;
+    width: 83%;
+    right: 0;
+    height: 10%;
+    text-align: center;
+  }
 }
 
 
 .scene-7 {
-  .image-wrapper {
-    height: 100%;
-    text-align: center;
-    width: 100%;
+  .image-quote {
     position: absolute;
-    top:0;
-    left:0;
+    top: 9%;
+    margin-top: -50px;
+    right: 3%;
+  }
 
-    img {
-      height: 100%;
-    }
+  p{
+    margin-left: 20px;
+    line-height: 50px;
+  }
+
+  .headline {
+    font: 700 3.8rem/1.2 'Asul',Arial,sans-serif;
+  }
+
+  .quote, .quotes {
+    font: 400 36px/40px 'Cookie',sans-serif;
+    text-shadow: 2px 2px 4px #000;
+  }
+
+  .from {
+    font: 400 24px/1.25 'Asul',Arial,sans-serif;
   }
 }
 
@@ -504,31 +590,6 @@ p, .headline {
 
 .scene-11 {
 
-  .image-quote {
-    position: absolute;
-    width: 100%;
-    background-color: rgba(0,0,0,0.4);
-  }
-
-  .image-quote {
-    top: 50%;
-    margin-top: -50px;    
-  }
-
-  p{
-    margin-left: 20px;
-    line-height: 50px;
-  }
-
-  .headline {
-    font: 700 3.8rem/1.2 'Asul',Arial,sans-serif;
-  }
-
-  .image-wrapper {
-    position: absolute;
-    top:0;
-    right:0;
-  }
 
 }
 
@@ -538,9 +599,14 @@ p, .headline {
 }
 
 .scene-13 {
-  video {
-    height: 100%;
+ .group {
+  img {
+    width: 50%;
+    height: 50%;
+    float: left;
+    transform-origin: 50% 50%;
   }
+ }
 
 }
 
@@ -597,6 +663,30 @@ p, .headline {
 }
 
 .scene-17 {
+  .image-quote {
+    position: absolute;
+    top: 80%;
+    margin-top: 0;
+    left: 5%;
+  }
+
+  p{
+    margin-left: 20px;
+    line-height: 50px;
+  }
+
+  .headline {
+    font: 700 3.8rem/1.2 'Asul',Arial,sans-serif;
+  }
+
+  .quote, .quotes {
+    font: 400 36px/40px 'Cookie',sans-serif;
+    text-shadow: 2px 2px 4px #000;
+  }
+
+  .from {
+    font: 400 24px/1.25 'Asul',Arial,sans-serif;
+  }
 }
 
 
@@ -637,8 +727,29 @@ p, .headline {
 
 
 .scene-21 {
-  video {
-    height: 100%;
+  .image-quote {
+    position: absolute;
+    top: 75%;
+    margin-top: -50px;
+    left: 15%;
+  }
+
+  p{
+    margin-left: 20px;
+    line-height: 50px;
+  }
+
+  .headline {
+    font: 700 3.8rem/1.2 'Asul',Arial,sans-serif;
+  }
+
+  .quote, .quotes {
+    font: 400 36px/40px 'Cookie',sans-serif;
+    text-shadow: 2px 2px 4px #000;
+  }
+
+  .from {
+    font: 400 24px/1.25 'Asul',Arial,sans-serif;
   }
 }
 

@@ -41,7 +41,7 @@
       <div class="theme theme3">
         <div class="scene scene-1" data-2000="transform:translateY(0%)" data-3000="transform:translateY(-100%)">
           <div class="wrapper">
-            <video loop preload='none' data-emit-events data-_startintro='' data-_endintro=''>
+            <video loop preload='none' poster='images/1-cover.jpg' data-emit-events data-_startintro='' data-_endintro=''>
               <source src="assets/videos/3-1-desperdicio.mp4" type="video/mp4"></source>
             </video>
           </div>
@@ -56,8 +56,12 @@
         </div>
 
         <div class="scene scene-2" data-2000="transform:translateY(100%)" data-3000="transform:translateY(0%)" data-7000="transform:translateY(0%)" data-8000="transform:translateY(-100%)">
-          <div class="wrapper fundo">
-            <p>tela 2</p>
+          <div class="wrapper fundo" data-4300='opacity:1' data-4800='opacity:0'>
+            <img src="images/2-1.jpg" alt="">
+          </div>
+
+          <div class="wrapper fundo" data-4600='opacity:0' data-5100='opacity:1'>
+            <img src="images/2-2.jpg" alt="">
           </div>
 
           <div class="wrapper text-wrapper">
@@ -71,12 +75,16 @@
               Por ano, os alimentos não consumidos são responsáveis pela emissão de 3,3 bilhões de toneladas de gases de efeito estufa na atmosfera, utilizam um volume de água equivalente a 250 km³ e ocupam quase 1,4 bilhões de hectares de terras, o que representa uma média de 30% de áreas agricultáveis.
 
             </p>
+
+            <p class='headline font'>
+              Fonte: FAO.
+            </p>
           </div>
         </div>
 
         <div class="scene scene-3" data-7000="transform:translateY(100%)" data-8000="transform:translateY(0%)" data-11000="transform:translateY(0%)" data-12000="transform:translateY(-100%)">
           <div class="wrapper">
-            <video preload='none' data-emit-events data-_startalimentacao='' data-_endalimentacao=''>
+            <video preload='none' poster='images/3-cover.jpg' data-emit-events data-_startalimentacao='' data-_endalimentacao=''>
               <source src="assets/videos/3-3-alimentacao.mp4" type="video/mp4"></source>
             </video>
           </div>
@@ -84,48 +92,69 @@
 
         <div class="scene scene-4" data-11000="transform:translateY(100%)" data-12000="transform:translateY(0%)" data-15000="transform:translateY(0%)" data-16000="transform:translateY(-100%)">
           <div class="wrapper">
-            <video preload='none' data-emit-events data-_startbandeira='' data-_endbandeira=''>
+            <video loop preload='none'  poster='images/4-cover.jpg' data-emit-events data-_startbandeira='' data-_endbandeira=''>
               <source src="assets/videos/3-4-bandeira.mp4" type="video/mp4"></source>
             </video>
+          </div>
+
+          <div class=" text-wrapper" data-13000='opacity:1' data-13500='opacity:0'>
+            <h1 class="headline">O Brasil e os alimentos</h1>
+          </div>
+
+          <div class="text-wrapper" data-13400='opacity:0' data-13900='opacity:1'>
+            <h1 class="headline">Desperdício na cadeia produtiva</h1>
           </div>
         </div>
 
         <div class="scene scene-5" data-15000="transform:translateY(100%)" data-16000="transform:translateY(0%)" data-19000="transform:translateY(0%)" data-20000="transform:translateY(-100%)">
-          <div class="wrapper">
-            <p>image 5</p>
+          <div class="wrapper fundo">
+            <img src="images/5-1.jpg" alt="">
           </div>
 
-          <div class="wrapper" data-17000="transform:translateX(100%)" data-18000="transform:translateX(0%)">
-            <p>image 5-2</p>
+          <div class="wrapper fundo repolho" data-16500="transform:translateX(100%)" data-18500="transform:translateX(-100%)">
+            <img src="images/5-2.jpg" alt="">
           </div>
         </div>
 
         <div class="scene scene-6" data-19000="transform:translateY(100%)" data-20000="transform:translateY(0%)" data-24000="transform:translateY(0%)" data-25000="transform:translateY(-100%)">
           <div class="wrapper">
-            <p>tela 6 - caracol</p>
+            <img src="images/6.jpg" alt="">
           </div>
 
-          <div class="wrapper" data-20500='transform:translateX(-100%)' data-22000='transform:translateX(0%)'>
-            <p>tela 6 - caracol logo</p>
+          <div class="wrapper logo-wrapper">
+            <div class="logo" data-20200='transform:translateX(-100%)' data-22000='transform:translateX(0%)'>
+              <img src="images/6-2.jpg" alt="">
+            </div>
+            
+            <div class="wrapper text-wrapper" data-22300='opacity:0' data-22800='opacity:1'>
+              <p class='headline'>O movimento defende um sistema alimentar que agrega pessoas e meio ambiente, respeitando a biodiversidade, a experiência do sabor e a relação produtor-consumidor.</p>
+            </div>
           </div>
 
-          <div class="wrapper" data-22300='opacity:0' data-22800='opacity:1'>
-            <p>tela 6 - caracol texto</p>
-          </div>
+          
 
-          <div class="wrapper" data-22800='opacity:0' data-23300='opacity:1'>
-            <p>tela 6 - caracol texto 2</p>
+          <div class="text-bottom" data-22800='opacity:0' data-23300='opacity:1'>
+            <p class='headline'>Alimento bom, limpo e justo.</p>
           </div>
 
         </div>
 
         <div class="scene scene-7" data-24000="transform:translateY(100%)" data-25000="transform:translateY(0%)" data-27000="transform:translateY(0%)" data-28000="transform:translateY(-100%)">
-          <div class="wrapper">
-            <p>tela 7 image</p>
+          <div class="wrapper image-wrapper fundo" >
+            <img src="images/7.jpg" alt="">
           </div>
 
-          <div class="wrapper">
-            <p>tela 7 hotspot and text</p>
+          <div class="image-quote" data-38000='transform:translateY(0%)' data-40500='transform:transform:translateY(3%)'>
+            <p class="quote">“A ecogastronomia é o comer integrado com a natureza.”
+            </p>
+            <p class="from">Fabiana Sanches Urbal – empreendedora social</p>
+          </div>
+
+          <div class="image-hotspot hotspot-area" data-hotspot="fabiana_urbal" data-39400='opacity:1;' data-39900='opacity:1;' >
+            <img src="images/play-icon.png" class="icon-play"/>
+            <span class="quote">
+              <span class="from">Assista a entrevista com Fabiana Urbal</span>
+            </span>
           </div>
 
 
@@ -133,133 +162,150 @@
 
         <div class="scene scene-8" data-27000="transform:translateY(100%)" data-28000="transform:translateY(0%)" data-31000="transform:translateY(0%)" data-32000="transform:translateY(-100%)">
           <div class="wrapper">
-            <video preload='none' data-emit-events data-_startoquealimenta='' data-_endoquealimenta=''>
+            <video loop preload='none'  poster='images/8-cover.jpg' data-emit-events data-_startoquealimenta='' data-_endoquealimenta=''>
               <source src="assets/videos/3-8-o_que_te_alimenta.mp4" type="video/mp4"></source>
             </video>
           </div>
         </div>
 
         <div class="scene scene-9" data-31000="transform:translateY(100%)" data-32000="transform:translateY(0%)" data-37000="transform:translateY(0%)" data-38000="transform:translateY(-100%)">
-          <div class="wrapper">
-            <p>tela 9 fundo</p>
+          <div class="wrapper image-wrapper fundo" >
+            <img src="images/9-1.jpg" alt="">
           </div>
 
-          <div class="wrapper">
-            <p>tela 9 2</p>
+          <div class="wrapper image-wrapper fundo" data-33000='transform: translateX(-100%)' data-34500='transform: translateX(100%)'>
+            <img src="images/9-2.jpg" alt="">
           </div>
 
-          <div class="wrapper">
-            <p>tela 9 3</p>
+          <div class="wrapper image-wrapper fundo" data-35000='transform: translateY(100%)' data-37000='transform: translateY(-100%)'>
+            <img src="images/9-3.jpg" alt="">
           </div>
         </div>
 
         <div class="scene scene-10" data-37000="transform:translateY(100%)" data-38000="transform:translateY(0%)" data-41000="transform:translateY(0%)" data-42000="transform:translateY(-100%)">
           <div class="wrapper">
-            <video preload='none' data-emit-events data-_startmsgcazita='' data-_endmsgcazita=''>
+            <video preload='none'  poster='images/10-cover.jpg'  data-emit-events data-_startmsgcazita='' data-_endmsgcazita=''>
               <source src="assets/videos/3-10-cassia_cazita_mensagem.mp4" type="video/mp4"></source>
             </video>
           </div>
         </div>
 
         <div class="scene scene-11" data-41000="transform:translateY(100%)" data-42000="transform:translateY(0%)" data-45000="transform:translateY(0%)" data-46000="transform:translateY(-100%)">
-          <div class="wrapper">
-            <p>tela 11</p>
+          <div class="wrapper image-wrapper fundo" >
+            <img src="images/11-1.jpg" alt="">
           </div>
 
-          <div class="wrapper">
-            <p>tela 11 2</p>
+          <div class="wrapper image-wrapper fundo" data-42500='transform: translateX(100%)' data-44500='transform: translateX(-100%)'>
+            <img src="images/11-2.jpg" alt="">
           </div>
         </div>
 
-        <div class="scene scene-12" data-45000="transform:translateY(100%)" data-46000="transform:translateY(0%)" data-50000="transform:translateY(0%)" data-51000="transform:translateY(-100%)">
+        <div class="scene scene-12" data-45000="transform:translateY(100%)" data-46000="transform:translateY(0%)" data-53000="transform:translateY(0%)" data-53300="transform:translateY(-100%)">
           <div class="wrapper">
-            <video preload='none' data-emit-events data-_startcazita='' data-_endcazita=''>
-              <source src="assets/videos/3-10-cassia_cazita_mensagem.mp4" type="video/mp4"></source>
+            <video preload='none'  poster='images/12-cover.jpg' data-emit-events data-_startcazita='' data-_endcazita=''>
+              <source src="assets/videos/3-12-cassia_cazita.mp4" type="video/mp4"></source>
             </video>
           </div>
         </div>
 
-        <div class="scene scene-13" data-50000="transform:translateY(100%)" data-51000="transform:translateY(0%)" data-55000="transform:translateY(0%)" data-56000="transform:translateY(-100%)">
+        <div class="scene scene-14" data-53000="transform:translateY(100%)" data-53300="transform:translateY(0%)" data-60000="transform:translateY(0%)" data-61000="transform:translateY(-100%)">
           <div class="wrapper">
-            <p>tela 13</p>
-          </div>
-          <div class="wrapper">
-            <p>tela 13 2</p>
-          </div>
-          <div class="wrapper">
-            <p>tela 13 3</p>
-          </div>
-          <div class="wrapper">
-            <p>tela 13 4</p>
-          </div>
-        </div>
-
-        <div class="scene scene-14" data-55000="transform:translateY(100%)" data-56000="transform:translateY(0%)" data-60000="transform:translateY(0%)" data-61000="transform:translateY(-100%)">
-          <div class="wrapper">
-            <video preload='none' data-emit-events data-_startdaniela='' data-_enddaniela=''>
+            <video preload='none'  poster='images/14-cover.jpg' data-emit-events data-_startdaniela='' data-_enddaniela=''>
               <source src="assets/videos/3-14-daniela_lisboa.mp4" type="video/mp4"></source>
             </video>
           </div>
         </div>
 
-        <div class="scene scene-15" data-60000="transform:translateY(100%)" data-61000="transform:translateY(0%)" data-63000="transform:translateY(0%)" data-64000="transform:translateY(-100%)">
-          <div class="wrapper">
-            <p>tela 15</p>
-          </div>
-
-          <div class="wrapper">
-            <p>tela 15 2</p>
+        <div class="scene scene-13" data-50800="transform:translateY(100%)" data-50900="transform:translateY(0%)" data-55000="transform:translateY(0%)" data-56000="transform:translateY(-100%)">
+          <div class="wrapper group">
+            <img src="images/13-1.jpg" alt="" data-50900='opacity:0' data-51400='opacity:1' data-54200='transform:translate(0%, 0%)' data-55000='transform:translate(-100%, -100%)'>
+            <img src="images/13-2.jpg" alt="" data-51200='opacity:0' data-51700='opacity:1' data-54200='transform:translate(0%, 0%)' data-55000='transform:translate(100%, -100%)'>
+            <img src="images/13-3.jpg" alt="" data-51500='opacity:0' data-53000='opacity:1' data-54200='transform:translate(0%, 0%)' data-55000='transform:translate(-100%, 100%)'>
+            <img src="images/13-4.jpg" alt="" data-52800='opacity:0' data-53300='opacity:1' data-54200='transform:translate(0%, 0%)' data-55000='transform:translate(100%, 100%)'>
           </div>
         </div>
 
-        <div class="scene scene-16" data-63000="transform:translateY(100%)" data-64000="transform:translateY(0%)" data-68000="transform:translateY(0%)" data-69000="transform:translateY(-100%)">
+        <div class="scene scene-15" data-60000="transform:translateY(100%)" data-61000="transform:translateY(0%)" data-63000="transform:translateY(0%)" data-64000="transform:translateY(-100%)">
+          <div class="wrapper image-wrapper fundo" >
+            <img src="images/15-1.jpg" alt="">
+          </div>
+
+          <div class="wrapper image-wrapper fundo" data-33000='transform: translateX(-100%)' data-34500='transform: translateX(100%)'>
+            <img src="images/15-2.jpg" alt="">
+          </div>
+        </div>
+
+        <div class="scene scene-16" data-63000="transform:translateY(100%)" data-64000="transform:translateY(0%)" data-68000="transform:translateX(0%)" data-69000="transform:translateX(-100%)">
           <div class="wrapper">
-            <video preload='none' data-emit-events data-_startfoodrev='' data-_endfoodrev=''>
+            <video preload='none' poster='images/16-cover.jpg'  data-emit-events data-_startfoodrev='' data-_endfoodrev=''>
               <source src="assets/videos/3-16-food_revolution.mp4" type="video/mp4"></source>
             </video>
           </div>
         </div>
 
-        <div class="scene scene-17" data-68000="transform:translateY(100%)" data-69000="transform:translateY(0%)" data-71000="transform:translateY(0%)" data-72000="transform:translateY(-100%)">
-          <div class="wrapper">
-            <p>tela 17</p>
+        <div class="scene scene-17" data-68000="transform:translateX(100%)" data-69000="transform:translateX(0%)" data-71000="transform:translateY(0%)" data-72000="transform:translateY(-100%)">
+           <div class="wrapper image-wrapper fundo" >
+            <img src="images/17.jpg" alt="">
+          </div>
+
+          <div class="image-quote" data-69000='transform:translateY(0%)' data-71500='transform:transform:translateY(3%)'>
+            <p class="quote">“As pessoas ainda têm preconceito em comer cascas, talos e folhas.”
+            </p>
+            <p class="from">Márcia Cristina Basílio - nutricionista</p>
           </div>
         </div>
 
         <div class="scene scene-18" data-71000="transform:translateY(100%)" data-72000="transform:translateY(0%)" data-76000="transform:translateY(0%)" data-77000="transform:translateY(-100%)">
           <div class="wrapper">
-            <video preload='none' data-emit-events data-_startseplantar='' data-_endseplantar=''>
+            <video preload='none' poster='images/18-cover.jpg'  data-emit-events data-_startseplantar='' data-_endseplantar=''>
               <source src="assets/videos/3-18-se_plantar.mp4" type="video/mp4"></source>
             </video>
           </div>
         </div>
 
         <div class="scene scene-19" data-76000="transform:translateY(100%)" data-77000="transform:translateY(0%)" data-79000="transform:translateY(0%)" data-80000="transform:translateY(-100%)">
-          <div class="wrapper">
-            <p>tela 19</p>
+          <div class="wrapper image-wrapper fundo" >
+            <img src="images/19-1.jpg" alt="">
           </div>
+
+          <!-- <div class="wrapper image-wrapper fundo" data-77000='transform: translateX(100%)' data-79000='transform: translateX(-100%)'>
+            <img src="images/19-2.jpg" alt="">
+          </div> -->
         </div>
 
         <div class="scene scene-20" data-79000="transform:translateY(100%)" data-80000="transform:translateY(0%)" data-84000="transform:translateY(0%)" data-85000="transform:translateY(-100%)">
           <div class="wrapper">
-            <video preload='none' data-emit-events data-_startdesperdicio='' data-_enddesperdicio=''>
+            <video preload='none' poster='images/20-cover.jpg'  data-emit-events data-_startdesperdicio='' data-_enddesperdicio=''>
               <source src="assets/videos/3-20-desperdicio.mp4" type="video/mp4"></source>
             </video>
           </div>
         </div>
-        <div class="scene scene-21" data-84000="transform:translateY(100%)" data-85000="transform:translateY(0%)" data-86000="transform:translateY(0%)" data-87000="transform:translateY(-100%)">
-          <div class="wrapper">
-            <p>tela 21</p>
+        <div class="scene scene-21" data-84000="transform:translateY(100%)" data-85000="transform:translateY(0%)" data-86000="transform:translateY(0%)" data-87000="transform:translateY(100%)">
+          <div class="wrapper image-wrapper fundo" >
+            <img src="images/21.jpg" alt="">
+          </div>
+
+          <div class="image-quote" data-84500='transform:translateY(0%)' data-86500='transform:transform:translateY(3%)'>
+            <p class="quote">“Na natureza não tem desperdício. As sobras são sempre reutilizadas.”
+            </p>
+            <p class="from">Peter Webb – agrônomo</p>
+          </div>
+
+          <div class="image-hotspot hotspot-area" data-hotspot="peter_webb" data-39400='opacity:1;' data-39900='opacity:1;' >
+            <img src="images/play-icon.png" class="icon-play"/>
+            <span class="quote">
+              <span class="from">Assista a entrevista com Peter Webb</span>
+            </span>
           </div>
         </div>
 
-        <div class="scene scene-22" data-86000="transform:translateY(100%)" data-87000="transform:translateY(0%)" data-88000="transform:translateY(0%)" data-89000="transform:translateY(-100%)">
-          <div class="wrapper">
-            <p>tela 22</p>
+        <div class="scene scene-22" data-86000="transform:translateY(-100%)" data-87000="transform:translateY(0%)" data-88000="transform:translateX(0%)" data-89000="transform:translateX(-100%)">
+          <div class="wrapper image-wrapper fundo" >
+            <img src="images/22.jpg" alt="">
           </div>
         </div>
 
-        <div class="scene scene-23" data-88000="transform:translateY(100%)" data-89000="transform:translateY(0%)" data-92000="transform:translateY(0%)" data-93000="transform:translateY(-100%)">
+        <div class="scene scene-23" data-88000="transform:translateX(100%)" data-89000="transform:translateX(0%)" data-92000="transform:translateY(0%)" data-93000="transform:translateY(-100%)">
           <div class="wrapper">
             <p>tela 23</p>
           </div>
@@ -267,7 +313,7 @@
 
         <div class="scene scene-24" data-92000="transform:translateY(100%)" data-93000="transform:translateY(0%)" data-97000="transform:translateY(0%)" data-98000="transform:translateY(-100%)">
           <div class="wrapper">
-            <video preload='none' data-emit-events data-_starttangerina='' data-_endtangerina=''>
+            <video preload='none'  poster='images/24-cover.jpg' data-emit-events data-_starttangerina='' data-_endtangerina=''>
               <source src="assets/videos/3-24-tangerina.mp4" type="video/mp4"></source>
             </video>
           </div>
@@ -281,7 +327,7 @@
 
         <div class="scene scene-26" data-102000="transform:translateY(100%)" data-103000="transform:translateY(0%)">
           <div class="wrapper">
-            <video preload='none' data-emit-events data-_startpomba='' >
+            <video preload='none'  poster='images/26-cover.jpg' data-emit-events data-_startpomba='' >
               <source src="assets/videos/3-26-pomba.mp4" type="video/mp4"></source>
             </video>
           </div>
@@ -291,7 +337,7 @@
         <div class="scene scene-ending" data-107000='transform: translateY(100%)' data-108000='transform: translateY(40%)'>
 
           <div class="text-wrapper">
-            <h1>Link para tema 3</h1>
+            <h1>Creditos</h1>
           </div>
 
         </div>
@@ -302,18 +348,27 @@
 
 
 
-      <div class="hotspot-wrapper hidden" data-hotspot="">
+      <div class="hotspot-wrapper hidden" data-hotspot="fabiana_urbal">
 
         <div class="video-wrapper">
-          <video controls preload="none" poster="">
-            <source src="" type="video/mp4"></source>
+          <video controls preload="none" poster="images/7.jpg">
+            <source src="assets/videos/3-7-fabiana_sanches_urbal.mp4" type="video/mp4"></source>
           </video>
         </div>
 
         <div class="close"><span class="icon-close">X</span></div>
       </div>
 
+      <div class="hotspot-wrapper hidden" data-hotspot="peter_webb">
 
+        <div class="video-wrapper">
+          <video controls preload="none" poster="images/21.jpg">
+            <source src="assets/videos/3-21-peter_webb.mp4" type="video/mp4"></source>
+          </video>
+        </div>
+
+        <div class="close"><span class="icon-close">X</span></div>
+      </div>
       
 
 

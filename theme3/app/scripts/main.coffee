@@ -233,8 +233,8 @@ Pace.on 'hide', ->
       startmsgcazita: 37000
       endmsgcazita: 42000
       startcazita: 45000
-      endcazita: 51000
-      startdaniela: 55000
+      endcazita: 53000
+      startdaniela: 54500
       enddaniela: 61000
       startfoodrev: 63000
       endfoodrev: 69000
