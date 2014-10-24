@@ -186,6 +186,12 @@ API.events =
   enddesperdicio: (el, dir)->
     API.playPauseMedia(el, dir is 'up')
 
+  endreginaup: (el, dir)->
+    API.pauseMedia(el)
+
+  endreginadown: (el)->
+    API.pauseMedia(el)
+
   starttangerina: (el, dir)->
     API.playPauseMedia(el, dir is 'down')
     
@@ -242,9 +248,11 @@ Pace.on 'hide', ->
       endseplantar: 77000
       startdesperdicio: 79000
       enddesperdicio: 85000
-      starttangerina: 92000
-      endtangerina: 98000
-      startpomba: 102000
+      endreginaup:91000
+      endreginadown: 93900
+      starttangerina: 94000
+      endtangerina: 100000
+      startpomba: 99000
     keyframe: (el, name, dir)->
       fnName = name.split("_")[1]
       fn = API.events[fnName]

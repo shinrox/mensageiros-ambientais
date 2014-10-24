@@ -754,9 +754,60 @@ p, .headline {
 }
 
 .scene-23 {
-  video{
-    height: 100%;
-  }
+    .text-wrapper {
+      width: 60%;
+      height: 86%;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      
+      p {
+        color: #000;
+        text-shadow: 3px 2px 3px #ccc;
+        margin:0;
+        padding: 0 15px;
+        margin-top: 10px;
+      }
+
+      .headline {
+        font: 700 3.6rem/1.2 'Asul',Arial,sans-serif;
+      }
+
+      .quote {
+        margin-top: 20px;
+        font: 700 4.5rem/1.2 'Cookie',sans-serif;
+      }
+
+      .from {
+        font: 700 2.8rem/1.2 'Asul',Arial,sans-serif;
+      }
+    }
+
+    .image-quote {
+      position: absolute;
+      bottom: 2%;
+      right: 2%;
+      height: 16%;
+      text-align: right;
+    }
+
+    .audio-wrapper{
+      text-align: center;
+      width: 60%;
+      position: absolute;
+      right: 0;
+      top: 45%;
+
+      .headline {
+        font: 700 3.6rem/1.2 'Asul',Arial,sans-serif;
+        color: #000;
+        text-shadow: 3px 2px 3px #ccc;
+        margin:0;
+        padding: 0 15px;
+        margin-top: 10px;
+        margin-bottom: 5%;
+      }
+    }
 }
 
 .scene-24 {
