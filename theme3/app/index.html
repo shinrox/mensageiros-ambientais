@@ -31,7 +31,10 @@
 
 </head>
 <body>
-  <div id="loading" style='width: 101%; height: 101%; position:fixed; top: 0; left:0; background-color: #555; z-index:1999; margin: 0;'>
+  <div id="loading">
+    <div class="loading-image">
+      <img src="images/logo_borboleta.png" alt="">
+    </div>
   </div>
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -153,7 +156,7 @@
           <div class="image-hotspot hotspot-area" data-hotspot="fabiana_urbal" data-39400='opacity:1;' data-39900='opacity:1;' >
             <img src="images/play-icon.png" class="icon-play"/>
             <span class="quote">
-              <span class="from">Assista a entrevista com Fabiana Urbal</span>
+              <span class="from">Assista à entrevista com Fabiana Urbal</span>
             </span>
           </div>
 
@@ -294,7 +297,7 @@
           <div class="image-hotspot hotspot-area" data-hotspot="peter_webb" data-39400='opacity:1;' data-39900='opacity:1;' >
             <img src="images/play-icon.png" class="icon-play"/>
             <span class="quote">
-              <span class="from">Assista a entrevista com Peter Webb</span>
+              <span class="from">Assista à entrevista com Peter Webb</span>
             </span>
           </div>
         </div>
@@ -310,7 +313,7 @@
             <img src="images/23.jpg" alt="">
           </div>
 
-          <div class="text-wrapper" data-90800='opacity:1' data-91300='opacity:0'>
+          <div class="text-wrapper" data-91300='opacity:1' data-91800='opacity:0'>
             <p class="headline" data-88800='opacity:0' data-89300='opacity:1'>
               Ainda criança, na Paraíba, Regina via seus pais aproveitando os alimentos de maneira integral. Quando se mudou para o Rio de Janeiro ficou impressionada com o desperdício que encontrava nas feiras livres. 
             </p>
@@ -325,9 +328,9 @@
 
           </div>
 
-          <div class="audio-wrapper" data-91000='opacity:0' data-91500='opacity:1'>
+          <div class="audio-wrapper" data-91500='opacity:0' data-92000='opacity:1'>
             <p class="headline">
-              Ouça a entrevista com Regina Tchelly
+              Ouça à entrevista com Regina Tchelly
             </p>
             <audio preload='none' controls data-emit-events data-_endreginaup='' data-_endreginadown=''>
               <source src='assets/audios/3-23-regina_tchelly.mp4' type='audio/mp4'></source>
@@ -354,11 +357,21 @@
           </div>
         </div>
 
-        <!-- <div class="scene scene-25" data-97000="transform:translateY(100%)" data-98000="transform:translateY(0%)" data-102000="transform:translateY(0%)" data-103000="transform:translateY(-100%)">
-          <div class="wrapper">
-            <p>tela 25</p>
+        <div class="scene scene-25" data-97000="transform:translateY(100%)" data-98000="transform:translateY(0%)" data-102000="transform:translateY(0%)" data-103000="transform:translateY(-100%)">
+          <div class="wrapper fundo">
+            
+            <img src="images/25.jpg" alt="">
+
+            <div class="text-wrapper logo">
+              <p>LOGO</p>
+            </div>
+
+            <div class="text-wrapper frase">
+              <p>FRASE</p>
+            </div>
+
           </div>
-        </div> -->
+        </div>
 
         <div class="scene scene-26" data-99000="transform:translateY(100%)" data-100000="transform:translateY(0%)">
           <div class="wrapper">
@@ -369,7 +382,13 @@
         </div>
 
 
-        <div class="scene scene-ending" data-107000='transform: translateY(100%)' data-108000='transform: translateY(40%)'>
+        <div class="scene scene-ending" data-107000='transform: translateY(100%)' data-108000='transform: translateY(0%)'>
+          <div class="back-to-top">
+            <img src="images/back-icon.png" class="icon-back"/>
+            <span class="quote">
+              <span class="from">Início</span>
+            </span>
+          </div>
 
           <div class="text-wrapper">
             <h1>Creditos</h1>
@@ -403,6 +422,24 @@
         </div>
 
         <div class="close"><span class="icon-close">X</span></div>
+      </div>
+
+      <div id="footer-wrapper">
+        <div id="menu-wrapper">
+          <ul class="themes">
+            <li><a href="/"><span class='headline'>Hortas urbanas comunitárias</span></a></li>
+            <li><a href="/alimentacao-organica"><span class='headline'>Alimentação orgânica</span></a></li>
+            <li><a href="/desperdicio-de-alimentos" class='active'><span class='headline'>Desperdício de alimentos</span></a></li>
+            <li><a href="/uso-racional-da-agua-e-energia"><span class='headline'>Uso racional da água e energia</span></a></li>
+          </ul>
+        
+
+          <div id="project-wrapper">
+            <h1 class="headline">Mensageiros ambientais</h1>
+            <p class="from">semeando práticas, colhendo consciência</p>
+          </div>
+        </div>
+        
       </div>
       
 
