@@ -31,7 +31,10 @@
 
 </head>
 <body>
-  <div id="loading" style='width: 101%; height: 101%; position:fixed; top: 0; left:0; background-color: #555; z-index:1999; margin: 0;'>
+   <div id="loading">
+    <div class="loading-image">
+      <img src="images/logo_borboleta.png" alt="">
+    </div>
   </div>
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -101,7 +104,7 @@
               <div class="image-hotspot hotspot-area" data-hotspot="claudia_visoni" >
                 <img src="images/play-icon.png" class="icon-play"/>
                 <span class="quote">
-                  <span class="from">Assista a entrevista com Claudia Visoni</span>
+                  <span class="from">Assista à entrevista com Claudia Visoni</span>
                 </span>
               </div>
 
@@ -222,7 +225,7 @@
           <div class="image-hotspot hotspot-area" data-hotspot="andrea_pesek" data-64100='opacity:0;' data-64000='' data-65000='opacity:1;' data-69000='' >
             <img src="images/play-icon.png" class="icon-play"/>
             <span class="quote">
-              <span class="from">Assista a entrevista com Andrea Pesek</span>
+              <span class="from">Assista à entrevista com Andrea Pesek</span>
             </span>
           </div>
 
@@ -362,7 +365,7 @@
             <div class="image-hotspot hotspot-area" data-hotspot="sergio_nagai" data-115000='opacity:0;' data-116000='opacity:0;' data-117000='opacity:1;'>
               <img src="images/play-icon.png" class="icon-play"/>
               <span class="quote">
-                <span class="from">Assista a entrevista com Sérgio Nagai</span>
+                <span class="from">Assista à entrevista com Sérgio Nagai</span>
               </span>
             </div>
 
@@ -436,7 +439,7 @@
 
         <div class="scene scene-2-10" data-131300='transform: translateX(100%);' data-132300='transform: translateX(0%)' data-134300='transform: translateY(0%);' data-135300='transform: translateY(-100%)' >
 
-          <div class="wrapper image-wrapper fundo">
+          <!-- <div class="wrapper image-wrapper fundo">
             <img src="images/theme1/2-10-compostagem.jpg" alt="">
           </div>
 
@@ -459,7 +462,13 @@
             <p class="headline">
               a catalisadores e minerais.
             </p>
+          </div> -->
+          <div class="wrapper video-wrapper compostagem">
+            <video preload="none" data-emit-events data-_startexpress='' data-_endexpress='' poster='images/theme1/2-10-compostagem.jpg'>
+              <source src="assets/videos/theme1/2-10-compostagem_expressa.mp4" type="video/mp4"></source>
+            </video>
           </div>
+          
 
         </div>
         
@@ -481,7 +490,7 @@
             <div class="image-hotspot hotspot-area" data-hotspot="rui_signori" data-137300='opacity:0;' data-138300='opacity:1;'>
               <img src="images/play-icon.png" class="icon-play"/>
               <span class="quote">
-                <span class="from">Assista a entrevista com Rui Signori</span>
+                <span class="from">Assista à entrevista com Rui Signori</span>
               </span>
             </div>
 
@@ -594,7 +603,7 @@
             <div class="image-quote">
               <p class="quote">“As pessoas procuram os produtos por indicação de outras. Quando elas não vêm comprar aqui, eu vou até elas.”
               </p>
-              <p class="from">Ivone Maria de Oliveira Getúlio – Horta de Sapopemba</p>
+              <p class="from">Ivone Maria de Oliveira Getúlio – cultivadora da Horta de Sapopemba</p>
             </div>
           </div>
 
@@ -624,15 +633,15 @@
             <img src="images/theme1/3-11-fundo.jpg" alt="">
 
             <div class="image-quote" data-181000='opacity:1;' data-182000='' data-183000='opacity:0;'>
-              <p class="quote">“Falta frase.”
+              <p class="quote">“Eu sou um mensageiro ambiental porque a ideia da Cidades sem Fome é recuperar áreas sem nenhum uso específico na cidade de São Paulo e transformá-las em oásis verdes produtivos, inserindo pessoas que estão em situação de vulnerabilidade social.”
               </p>
-              <p class="from">Hans Dieter Temp – falta descrição</p>
+              <p class="from">Hans Dieter Temp – fundador da ação</p>
             </div>
 
             <div class="image-hotspot hotspot-area" data-hotspot="hans_dieter" data-183000='opacity:0;' data-184000='opacity:1;'>
               <img src="images/play-icon.png" class="icon-play"/>
               <span class="quote">
-                <span class="from">Assista a entrevista com Hans Dieter Temp</span>
+                <span class="from">Assista à entrevista com Hans Dieter Temp</span>
               </span>
             </div>
 
@@ -744,6 +753,24 @@
         </div>
 
         <div class="close"><span class="icon-close">X</span></div>
+      </div>
+
+      <div id="footer-wrapper">
+        <div id="menu-wrapper">
+          <ul class="themes">
+            <li><a href="/" class='active'><span class='headline'>Hortas urbanas comunitárias</span></a></li>
+            <li><a href="/alimentacao-organica"><span class='headline'>Alimentação orgânica</span></a></li>
+            <li><a href="/desperdicio-de-alimentos" ><span class='headline'>Desperdício de alimentos</span></a></li>
+            <li><a href="/uso-racional-da-agua-e-energia"><span class='headline'>Uso racional da água e energia</span></a></li>
+          </ul>
+        
+
+          <div id="project-wrapper">
+            <h1 class="headline">Mensageiros ambientais</h1>
+            <p class="from">semeando práticas, colhendo consciência</p>
+          </div>
+        </div>
+        
       </div>
 
 

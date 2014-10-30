@@ -252,6 +252,19 @@ API.events =
       if !API.videos.v2_9.alreadyPlayed
         API.playMedia(API.videos.v2_9)
 
+  data_startexpress: (dir)->
+    if dir is 'down'
+      API.playMedia(API.videos.v2_10)
+    else
+      API.pauseMedia(API.videos.v2_10)
+
+  data_endexpress: (dir)->
+    if dir is 'down'
+      API.pauseMedia(API.videos.v2_10)
+    else
+      if !API.videos.v2_10.alreadyPlayed
+        API.playMedia(API.videos.v2_10)
+
 
   data_startrecycling: (dir)->
     if dir is 'down'
@@ -334,6 +347,7 @@ Pace.on 'hide', ->
     v9: $(".scene-9 video")[0]
     v2_7: $(".scene-2-7 video")[0]
     v2_9: $(".scene-2-9 video")[0]
+    v2_10: $(".scene-2-10 video")[0]
     v2_12: $(".scene-2-12 video")[0]
     v2_14: $(".scene-2-14 video")[0]
     v3_3: $(".scene-3-3 video")[0]
@@ -384,6 +398,8 @@ Pace.on 'hide', ->
       endjosue: 126300
       startcomposting: 129300
       endcomposting: 132300
+      startexpress: 132300
+      endexpress: 135300
       startrecycling: 140300
       endrecycling: 145200
       startreciclamundo: 146000
