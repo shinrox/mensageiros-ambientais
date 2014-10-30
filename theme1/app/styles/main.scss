@@ -1338,3 +1338,33 @@ video {
   }
 
 }
+
+
+.scene-ending {
+  
+  .fundo img{
+    position: absolute;
+    top: -35%;
+    
+  }
+
+  .text-wrapper{
+    background: url(../images/dark_wall.png) repeat scroll center center transparent;
+    width: 100%;
+    height: 75px;
+    position: absolute;
+    top: 23%;
+    left: 0;
+    text-align: center;
+    text-decoration: underline;
+    line-height: 50px;
+    box-shadow: 1px 1px 1px 1px #000;
+    box-shadow: 0px 3px 5px 1px #000;
+
+    .headline {
+      font: 700 3.4rem/1.2 'Asul',Arial,sans-serif;
+      line-height: 75px;
+    }
+
+  }
+}
