@@ -132,74 +132,46 @@ API.events =
   endintro: (el, dir)->
     API.playPauseMedia(el, dir is 'up')
 
-  startalimentacao: (el, dir)->
+  start3v: (el, dir)->
     API.playPauseMedia(el, dir is 'down')
 
-  endalimentacao: (el, dir)->
+  end3v: (el, dir)->
     API.playPauseMedia(el, dir is 'up')
 
-  startbandeira: (el, dir)->
-    API.playPauseMedia(el, dir is 'down')
-
-  endbandeira: (el, dir)->
-    API.playPauseMedia(el, dir is 'up')
-
-  startoquealimenta: (el, dir)->
-    API.playPauseMedia(el, dir is 'down')
-
-  endoquealimenta: (el, dir)->
-    API.playPauseMedia(el, dir is 'up')
-
-  startmsgcazita: (el, dir)->
-    API.playPauseMedia(el, dir is 'down')
-
-  endmsgcazita: (el, dir)->
-    API.playPauseMedia(el, dir is 'up')
-
-  startcazita: (el, dir)->
-    API.playPauseMedia(el, dir is 'down')
-    
-  endcazita: (el, dir)->
-    API.playPauseMedia(el, dir is 'up')
-
-  startdaniela: (el, dir)->
-    API.playPauseMedia(el, dir is 'down')
-    
-  enddaniela: (el, dir)->
-    API.playPauseMedia(el, dir is 'up')
-
-  startfoodrev: (el, dir)->
-    API.playPauseMedia(el, dir is 'down')
-    
-  endfoodrev: (el, dir)->
-    API.playPauseMedia(el, dir is 'up')
-
-  startseplantar: (el, dir)->
-    API.playPauseMedia(el, dir is 'down')
-    
-  endseplantar: (el, dir)->
-    API.playPauseMedia(el, dir is 'up')
-
-  startdesperdicio: (el, dir)->
-    API.playPauseMedia(el, dir is 'down')
-    
-  enddesperdicio: (el, dir)->
-    API.playPauseMedia(el, dir is 'up')
-
-  endreginaup: (el, dir)->
+  end3a: (el, dir)->
     API.pauseMedia(el)
 
-  endreginadown: (el)->
-    API.pauseMedia(el)
-
-  starttangerina: (el, dir)->
+  start4a: (el, dir)->
     API.playPauseMedia(el, dir is 'down')
-    
-  endtangerina: (el, dir)->
+
+  end4a: (el, dir)->
     API.playPauseMedia(el, dir is 'up')
 
-  startpomba: (el, dir)->
+  start6a: (el, dir)->
     API.playPauseMedia(el, dir is 'down')
+
+  end6a: (el, dir)->
+    API.playPauseMedia(el, dir is 'up')
+
+  start6v: (el, dir)->
+    API.playPauseMedia(el, dir is 'down')
+
+  end6v: (el, dir)->
+    API.playPauseMedia(el, dir is 'up')
+
+  start8a: (el, dir)->
+    API.playPauseMedia(el, dir is 'down')
+
+  end8a: (el, dir)->
+    API.playPauseMedia(el, dir is 'up')
+
+  start12v: (el, dir)->
+    API.playPauseMedia(el, dir is 'down')
+
+  end12v: (el, dir)->
+    API.playPauseMedia(el, dir is 'up')
+
+  
 
 API.scenes = do->
   scenes = {}
@@ -219,9 +191,6 @@ Pace.on 'hide', ->
     media = $(e).get(0)
     media.onended = ()-> 
       @alreadyPlayed = true
-      s = @src
-      @src = ''
-      @src= s
 
 
   API.skrollr = skrollr.init({
@@ -230,29 +199,19 @@ Pace.on 'hide', ->
     constants:
       startintro: 0
       endintro: 3000
-      startalimentacao:7000
-      endalimentacao: 11500
-      startbandeira: 11600
-      endbandeira: 16000
-      startoquealimenta: 27000
-      endoquealimenta: 32000
-      startmsgcazita: 37000
-      endmsgcazita: 42000
-      startcazita: 45000
-      endcazita: 53000
-      startdaniela: 54500
-      enddaniela: 61000
-      startfoodrev: 63000
-      endfoodrev: 69000
-      startseplantar: 71000
-      endseplantar: 77000
-      startdesperdicio: 79000
-      enddesperdicio: 85000
-      endreginaup:91000
-      endreginadown: 93900
-      starttangerina: 94000
-      endtangerina: 100000
-      startpomba: 99000
+      start3v:5000
+      end3v: 8000
+      end3a: 10900
+      start4a: 11000
+      end4a: 22000
+      start6a: 23000
+      end6a: 30000
+      start6v: 27000
+      end6v: 29900
+      start8a: 33000
+      end8a: 37000
+      start12v: 48000
+      end12v: 54000
     keyframe: (el, name, dir)->
       fnName = name.split("_")[1]
       fn = API.events[fnName]
