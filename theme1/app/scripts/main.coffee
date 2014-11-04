@@ -101,7 +101,10 @@ API.openHotSpot = (hotspot)->
       $("body").css("overflow", "hidden")
       $this = $(this)
       API.hotspotOn = true;
-      $this.find("video")[0].play();
+      video = $this.find("video")
+
+      if video. length > 0
+        video[0].play();
 
 
 $ ()->
@@ -361,15 +364,10 @@ Pace.on 'hide', ->
     a2_1: $(".scene-2-1 audio")[0]
     a2_6: $(".scene-2-6 audio")[0]
 
-  for own key, video of API.videos
-    video.onended = ()->
-      @alreadyPlayed = true
-      s = @src
-      @src = ''
-      @src= s
-
-  for own key, audio of API.audios
-    audio.onended = ()->
+  $("video, audio").each (i, e)->
+    media = $(e).get(0)
+    media.onended = ()->
+      $(".hotspot-wrapper:visible").find('.close').click();
       @alreadyPlayed = true
 
   API.skrollr = skrollr.init({

@@ -114,7 +114,10 @@ API.openHotSpot = (hotspot)->
       $("body").css("overflow", "hidden")
       $this = $(this)
       API.hotspotOn = true;
-      $this.find("video")[0].play();
+      video = $this.find("video")
+
+      if video. length > 0
+        video[0].play();
 
 
 $ ()->
@@ -171,6 +174,24 @@ API.events =
   end12v: (el, dir)->
     API.playPauseMedia(el, dir is 'up')
 
+  start18v: (el, dir)->
+    API.playPauseMedia(el, dir is 'down')
+
+  end18v: (el, dir)->
+    API.playPauseMedia(el, dir is 'up')
+
+  start19v: (el, dir)->
+    API.playPauseMedia(el, dir is 'down')
+
+  end19v: (el, dir)->
+    API.playPauseMedia(el, dir is 'up')
+
+  start20v: (el, dir)->
+    API.playPauseMedia(el, dir is 'down')
+
+  end20v: (el, dir)->
+    API.playPauseMedia(el, dir is 'up')
+
   
 
 API.scenes = do->
@@ -189,7 +210,8 @@ Pace.on 'hide', ->
 
   $("video, audio").each (i, e)->
     media = $(e).get(0)
-    media.onended = ()-> 
+    media.onended = ()->
+      $(".hotspot-wrapper:visible").find('.close').click();
       @alreadyPlayed = true
 
 
@@ -198,8 +220,8 @@ Pace.on 'hide', ->
     smoothScrollingDuration: 1000
     constants:
       startintro: 0
-      endintro: 3000
-      start3v:5000
+      endintro: 2500
+      start3v:5500
       end3v: 8000
       end3a: 10900
       start4a: 11000
@@ -212,6 +234,12 @@ Pace.on 'hide', ->
       end8a: 37000
       start12v: 48000
       end12v: 54000
+      start18v: 98000
+      end18v: 105500
+      start19v: 105600
+      end19v: 112000
+      start20v: 113000
+      end20v: 117000
     keyframe: (el, name, dir)->
       fnName = name.split("_")[1]
       fn = API.events[fnName]

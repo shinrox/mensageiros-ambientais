@@ -2,9 +2,17 @@
 <html class="no-js">
 <head>
   <meta charset="utf-8">
-  <title>mensageiros ambientais</title>
+  <title>Mensageiros ambientais</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
+
+  <meta property="og:title" content="Mensageiros ambientais" />
+  <meta property="og:site_name" content="Mensageiros ambientais"/>
+  <meta property="og:description" content="Semeando práticas, colhendo consciência" />
+  <meta property="og:image"
+content="http://www.mensageirosambientais.com/images/logo_borboleta.png" />
+<meta property="og:url"
+content="http://www.mensageirosambientais.com" />
   <link rel="shortcut icon" href="/favicon.ico">
 
   <link href='http://fonts.googleapis.com/css?family=Asul:400,700' rel='stylesheet' type='text/css'>
@@ -17,6 +25,8 @@
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/common.css">
+  <link rel="stylesheet" href="styles/icons.css">
   <link rel="stylesheet" href="styles/main.css">
   <link href="styles/pace-theme-center-simple.css" rel="stylesheet" />
   <!-- endbuild -->
@@ -276,34 +286,34 @@
           </div>
 
           <div class="wrapper image-wrapper horizontal grupo-1" >
-            <div class="wrapper image-wrapper" data-86400='transform: translateX(-101%)' data-89400='transform: translateX(0%)'>
+            <div class="image-wrapper" data-86400='transform: translateX(-101%)' data-89400='transform: translateX(0%)'>
               <img src="images/theme1/1-17-horizontal-1.jpg" alt="">
             </div>
-            <div class="wrapper image-wrapper" data-86400='transform: translateX(101%)' data-89400='transform: translateX(0%)'>
+            <div class="image-wrapper" data-86400='transform: translateX(101%)' data-89400='transform: translateX(0%)'>
               <img src="images/theme1/1-17-horizontal-2.jpg" alt="">
             </div>
-            <div class="wrapper image-wrapper" data-86400='transform: translateX(-101%)' data-89400='transform: translateX(0%)'>
+            <div class="image-wrapper" data-86400='transform: translateX(-101%)' data-89400='transform: translateX(0%)'>
               <img src="images/theme1/1-17-horizontal-3.jpg" alt="">
             </div>
           </div>
 
           <div class="wrapper image-wrapper horizontal grupo-2" >
-            <div class="wrapper image-wrapper" data-90000='transform: translateX(101%)' data-93000='transform: translateX(0%)'>
+            <div class="image-wrapper" data-90000='transform: translateX(101%)' data-93000='transform: translateX(0%)'>
               <img src="images/theme1/1-17-horizontal-4.jpg" alt="">
             </div>
-            <div class="wrapper image-wrapper" data-90000='transform: translateX(-101%)' data-93000='transform: translateX(0%)'>
+            <div class="image-wrapper" data-90000='transform: translateX(-101%)' data-93000='transform: translateX(0%)'>
               <img src="images/theme1/1-17-horizontal-5.jpg" alt="">
             </div>
-            <div class="wrapper image-wrapper" data-90000='transform: translateX(101%)' data-93000='transform: translateX(0%)'>
+            <div class="image-wrapper" data-90000='transform: translateX(101%)' data-93000='transform: translateX(0%)'>
               <img src="images/theme1/1-17-horizontal-6.jpg" alt="">
             </div>
           </div>
 
           <div class="wrapper image-wrapper horizontal grupo-3" >
-            <div class="wrapper image-wrapper" data-93000='transform: translateY(-101%)' data-96000='transform: translateY(0%)'>
+            <div class="image-wrapper" data-93000='transform: translateY(-101%)' data-96000='transform: translateY(0%)'>
               <img src="images/theme1/1-17-placa.jpg" data-93000='transform: translateY(-30%)' data-99000='transform: translateY(0%)'>
             </div>
-            <div class="wrapper image-wrapper" data-93000='transform: translateY(101%)' data-96000='transform: translateY(0%)'>
+            <div class="image-wrapper" data-93000='transform: translateY(101%)' data-96000='transform: translateY(0%)'>
               <img src="images/theme1/1-17-mesa.jpg" data-93000='transform: translateY(0%)' data-99000='transform: translateY(-50%)'>
             </div>
           </div>
@@ -333,11 +343,11 @@
             <img src="images/theme1/2-2-hortalicas.jpg" alt="">
           </div>
 
-          <div class="wrapper image-wrapper residuos" data-108900='transform:translateY(0%)' data-109000='transform: translateY(-100%)'>
+          <div class="wrapper image-wrapper residuos" data-108900='transform:translateY(100%)' data-109000='transform: translateY(0%)'>
             <img src="images/theme1/2-4-residuos.jpg" alt="">
           </div>
 
-          <div class="wrapper image-wrapper group" data-107600='transform:translateY(0%)' data-107700='transform: translateY(-100%)'>
+          <div class="wrapper image-wrapper group" data-107600='transform:translateY(100%)' data-107700='transform: translateY(0%)'>
             <img src="images/theme1/2-3-placa.jpg" class='placa' data-107700='transform:translate(-100%,-100%)' data-108900='transform: translate(0%, 0%)' data-109300='opacity:1' data-110300='opacity:0'>
             <img src="images/theme1/2-3-flores_amarelas.jpg" class='placa' data-107700='transform:translate(100%,-100%)' data-108900='transform: translate(0%, 0%)' data-110000='opacity:1' data-111000='opacity:0'>
             <img src="images/theme1/2-3-baldes.jpg" class='placa' data-107700='transform:translate(-100%,100%)' data-108900='transform: translate(0%, 0%)' data-110700='opacity:1' data-111700='opacity:0'>
@@ -761,19 +771,43 @@
         <div class="close"><span class="icon-close">X</span></div>
       </div>
 
+      <div class="hotspot-wrapper hidden credits" data-hotspot="credits">
+
+        <div class="video-wrapper wrapper fundo">
+          <img src="images/credits.jpg">
+        </div>
+
+        <div class="close"><span class="icon-close">X</span></div>
+      </div>
+
+      
+
       <div id="footer-wrapper">
         <div id="menu-wrapper">
           <ul class="themes">
-            <li><a href="/" class='active'><span class='headline'>Hortas urbanas comunitárias</span></a></li>
+            <li><a href="/"><span class='headline' class='active'>Hortas urbanas comunitárias</span></a></li>
             <li><a href="/alimentacao-organica"><span class='headline'>Alimentação orgânica</span></a></li>
             <li><a href="/desperdicio-de-alimentos" ><span class='headline'>Desperdício de alimentos</span></a></li>
-            <li><a href="/uso-racional-da-agua-e-energia"><span class='headline'>Uso racional da água e energia</span></a></li>
+            <li><a href="/uso-racional-da-agua-e-energia" ><span class='headline'>Uso racional da água e energia</span></a></li>
+            
           </ul>
         
 
           <div id="project-wrapper">
-            <h1 class="headline">Mensageiros ambientais</h1>
-            <p class="from">semeando práticas, colhendo consciência</p>
+            <ul class='project'>
+              <li class='share'>
+                <h1 class="headline">Compartilhe: <a href='https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.mensageirosambientais.com' target='_blank'><span class='icon icon-facebook'></span></a></h1>
+              </li>
+
+              <li class='title'>
+                <h1 class="headline">Mensageiros ambientais</h1>
+                <p class="from">semeando práticas, colhendo consciência</p>
+              </li>
+              <li class='credits'> 
+                <a href="#"><h1 class="headline hotspot-area headline" data-hotspot="credits">creditos</h1></a>
+              </li>
+            </ul>
+            
           </div>
         </div>
         
