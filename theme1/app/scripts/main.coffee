@@ -103,7 +103,7 @@ API.openHotSpot = (hotspot)->
       API.hotspotOn = true;
       video = $this.find("video")
 
-      if video. length > 0
+      if video.length > 0
         video[0].play();
 
 
@@ -404,7 +404,7 @@ Pace.on 'hide', ->
       endreciclamundo: 154000
       startong: 155100
       endong: 162000
-      startgenival: 165500
+      startgenival: 166500
       endgenival: 170000
       startcidadessemfome: 175000
       endcidadessemfome: 181000

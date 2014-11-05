@@ -114,7 +114,10 @@ API.openHotSpot = (hotspot)->
       $("body").css("overflow", "hidden")
       $this = $(this)
       API.hotspotOn = true;
-      $this.find("video")[0].play();
+      video = $this.find("video")
+
+      if video.length > 0
+        video[0].play();
 
 
 $ ()->
@@ -186,6 +189,12 @@ API.events =
   endmauro: (el, dir)->
     API.playPauseMedia(el, dir is 'up')
 
+  startsorvete: (el, dir)->
+    API.playPauseMedia(el, dir is 'down')
+
+  endsorvete: (el, dir)->
+    API.playPauseMedia(el, dir is 'up')
+
   startthais: (el, dir)->
     API.playPauseMedia(el, dir is 'down')
 
@@ -224,11 +233,9 @@ Pace.on 'hide', ->
 
   $("video, audio").each (i, e)->
     media = $(e).get(0)
-    media.onended = ()-> 
+    media.onended = ()->
+      $(".hotspot-wrapper:visible").find('.close').click();
       @alreadyPlayed = true
-      s = @src
-      @src = ''
-      @src= s
 
 
   API.skrollr = skrollr.init({
@@ -237,7 +244,7 @@ Pace.on 'hide', ->
     constants:
       startaao: 0
       endaao: 3000
-      startcomerciantes: 10000
+      startcomerciantes: 10500
       endcomerciantes: 15000
       startrenata: 18000
       endrenata: 22000
@@ -254,14 +261,16 @@ Pace.on 'hide', ->
       starthilda: 59200
       endhilda: 65000
       startmauro: 66200
-      endmauro: 72000
+      endmauro: 71500
+      startsorvete: 71600
+      endsorvete: 78500
       startthais: 87200
       endthais: 93000
       startsusana: 95500
       endsusana: 103000
-      startfeira: 95500
-      endfeira: 112000
-      startbiel: 112000
+      startfeira: 111000
+      endfeira: 116500
+      startbiel: 116600
     keyframe: (el, name, dir)->
       fnName = name.split("_")[1]
       fn = API.events[fnName]

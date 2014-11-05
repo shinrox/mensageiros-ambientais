@@ -859,7 +859,7 @@
   }
 }
 
-.scene-3-9, .scene-3-13 {
+.scene-3-9, .scene-3-13, .scene-3-4 {
   .image-quote{
     position: absolute;
     bottom:0%;
@@ -876,6 +876,10 @@
   .headline {
     font: 700 3.8rem/1.2 'Asul',Arial,sans-serif;
   }
+}
+
+.scene-3-4 .image-quote{
+  padding: 20px 0;
 }
 
 .image-wrapper.fundo {
