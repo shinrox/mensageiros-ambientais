@@ -252,7 +252,7 @@ Pace.on 'hide', ->
       endluciana: 30000
       startovos: 31200
       endovos: 35000
-      startprodutos: 40200
+      startprodutos: 40700
       endprodutos: 45000
       startadenilson: 46200
       endadenilson: 51000
@@ -264,10 +264,10 @@ Pace.on 'hide', ->
       endmauro: 71500
       startsorvete: 71600
       endsorvete: 78500
-      startthais: 87200
+      startthais: 87700
       endthais: 93000
       startsusana: 95500
-      endsusana: 103000
+      endsusana: 100500
       startfeira: 111000
       endfeira: 116500
       startbiel: 116600

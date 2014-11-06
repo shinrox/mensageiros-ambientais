@@ -162,23 +162,48 @@
 }
 
 .scene-9 {
-  .text-wrapper {
+  .text-wrapper.title {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 2%;
+    margin: 0;
+  }
+
+  .fonte {
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    width: 95%;
+    margin: 0;
+  }
+
+  .text-wrapper.content {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
-
-    .title{
-      margin-left: 0;
+    display: table;
+    margin: 0;
+    left: 0;
+    
+    .content-wrapper {
+      display: table-cell;
+      vertical-align: middle;
+      padding: 10px 0;
     }
 
-    .fonte {
-      text-align: right;
-      position: absolute;
-      bottom: 0;
-      width: 95%;
+    .headline {
+      background-color: rgba(0,0,0,0.6);
       margin: 0;
+      padding: 15px 0;
+      line-height: 50px;
+
+      span{
+        margin-left: 2%;
+      }
     }
+    
   }
 }
 
@@ -260,16 +285,15 @@
 .scene-15{
   .image-quote {
     position: absolute;
-    width: 65%;
-  }
-
-  .image-quote {
-    top: 10%;
-    margin-top: -50px;    
+    width: 100%;
+    bottom: 0%;
+    margin-top: -50px;
+    background-color: rgba(0,0,0,0.5);
+    padding: 15px 0; 
   }
 
   p.quote{
-    font: 400 4.5rem/1.2 'Cookie',sans-serif;
+    font: 400 4.2rem/1.2 'Cookie',sans-serif;
   }
 
   p{
@@ -371,16 +395,15 @@
 .scene-26{
   .image-quote {
     position: absolute;
-    width: 65%;
-  }
-
-  .image-quote {
-    top: 10%;
-    margin-top: -50px;    
+    width: 100%;
+    bottom: 0%;
+    margin-top: -50px;
+    background-color: rgba(0,0,0,0.5);
+    padding: 15px 0; 
   }
 
   p.quote{
-    font: 400 4.5rem/1.2 'Cookie',sans-serif;
+    font: 400 4.2rem/1.2 'Cookie',sans-serif;
   }
 
   p{
@@ -461,17 +484,120 @@
 
 .scene-31 {
   .group-1 .text-wrapper{
-    width: 55%;
+    width: 53.5%;
     position: absolute;
-    right: 0;
+    right: 1%;
+    height: 100%;
     font: 700 2.6rem/1.2 'Asul',Arial,sans-serif;
     color: #000;
     text-shadow: none;
     line-height: 20px;
     text-align: left;
+    display: table;
 
     p{
       line-height:35px;
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
+  .group-2 {
+    background-color: #FFF;
+
+    .headline {
+      font: 700 2.6rem/1.2 'Asul',Arial,sans-serif;
+      color: #000;
+      text-shadow: none;
+      line-height: 20px;
+    }
+
+    .fonte {
+      top: initial;
+      position:absolute;
+      right:3%;
+      bottom: 3%;
+      text-align: right;
+      height: auto;
+    }
+
+    .food.title {
+      text-align: center;
+    }
+
+    .food {
+      position:relative;
+      height: 10%;
+      width: 100%;
+      left:0;
+      text-align: left;
+      
+      .text-wrapper {
+        display: table;
+        height: 100%;
+        padding-left: 10px;
+        width: 100%;
+        overflow: hidden;
+
+        .headline {
+          display: table-cell;
+          vertical-align: middle;
+        }
+
+        .percentual:before {
+          content: attr(data-value);
+        }
+      }
+
+      span.headline {
+        color: #FFF;
+      }
+
+      img{
+        float:right;
+        position:absolute;
+        right: 0%;
+        top:0;
+        height: 100%;
+        width: auto;
+      }
+    }
+
+
+    .pimentao {
+      background-color: #DF0101;
+    }
+
+    .morango {
+      background-color: #FF0000;
+    }
+
+    .pepino {
+      background-color: #DF3A01;
+    } 
+      
+    .alface{
+      background-color: #FF4000;
+    }
+
+    .cenoura {
+      background-color: #DF7401;
+    }
+
+    .abacaxi{
+      background-color: #FF8000;
+    }
+
+    .beterraba {
+      background-color: #DBA901;
+    }
+
+    .mamao {
+      background-color: #FFBF00;
+    } 
+
+    .tomate {
+      background-color: #FACC2E;
     }
   }
 }
