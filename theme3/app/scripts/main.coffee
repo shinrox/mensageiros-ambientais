@@ -114,7 +114,10 @@ API.openHotSpot = (hotspot)->
       $("body").css("overflow", "hidden")
       $this = $(this)
       API.hotspotOn = true;
-      $this.find("video")[0].play();
+      video = $this.find("video")
+
+      if video. length > 0
+        video[0].play();
 
 
 $ ()->
@@ -218,10 +221,8 @@ Pace.on 'hide', ->
   $("video, audio").each (i, e)->
     media = $(e).get(0)
     media.onended = ()-> 
+      $(".hotspot-wrapper:visible").find('.close').click();
       @alreadyPlayed = true
-      s = @src
-      @src = ''
-      @src= s
 
 
   API.skrollr = skrollr.init({
@@ -229,30 +230,30 @@ Pace.on 'hide', ->
     smoothScrollingDuration: 1000
     constants:
       startintro: 0
-      endintro: 3000
-      startalimentacao:7000
-      endalimentacao: 11500
-      startbandeira: 11600
+      endintro: 2500
+      startalimentacao:6000
+      endalimentacao: 9500
+      startbandeira: 11500
       endbandeira: 16000
       startoquealimenta: 27000
       endoquealimenta: 32000
-      startmsgcazita: 37000
-      endmsgcazita: 42000
-      startcazita: 45000
+      startmsgcazita: 36000
+      endmsgcazita: 40000
+      startcazita: 48500
       endcazita: 53000
       startdaniela: 54500
       enddaniela: 61000
-      startfoodrev: 63000
+      startfoodrev: 65000
       endfoodrev: 69000
-      startseplantar: 71000
+      startseplantar: 73000
       endseplantar: 77000
       startdesperdicio: 79000
-      enddesperdicio: 85000
+      enddesperdicio: 84000
       endreginaup:91000
       endreginadown: 93900
       starttangerina: 94000
       endtangerina: 100000
-      startpomba: 99000
+      startpomba: 106000
     keyframe: (el, name, dir)->
       fnName = name.split("_")[1]
       fn = API.events[fnName]
