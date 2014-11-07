@@ -30,6 +30,18 @@ a{
   color: #FFF;
 }
 
+.video-title {
+  .headline {
+    font: 700 4.3rem/1.2 'Asul',Arial,sans-serif;
+    .title-start {
+      font-family: 'Playball', cursive !important;
+      font: 7.8rem/1.2 'Playball',cursive !important;
+    }
+  }
+}
+
+
+
 body > div.theme {
   position:fixed;
   top:50%;
