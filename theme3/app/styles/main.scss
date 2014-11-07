@@ -60,14 +60,25 @@
   }
 
   .text-wrapper {
-    position: absolute;
-    top: 0%;
-    left: 0%;
     height: 100%;
-    width: 100%;
+    width: 60%;
+    left: 20%;
+    position: absolute;
+    top:0;
+    display: table;
 
     p {
       margin-top: 5%;
+    }
+
+    .headline {
+      color:#000;
+      text-shadow: none;
+    }
+
+    .content-wrapper{
+      display: table-cell;
+      vertical-align: middle;
     }
 
     .font{
@@ -77,35 +88,6 @@
       right: 5%;
       margin: 0;
     }
-  }
-
-  .frase {
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-
-    .title {
-      text-align: center;
-      margin: 0;
-      padding: 0 10px;
-    }
-
-    .quote-group{
-      position: absolute;
-      top:40%;
-      height: 100px;
-      margin-top: -50px;
-    }
-
-    .quote, .quotes {
-      font: 400 4.1rem/1.2 'Cookie',sans-serif;
-    }
-
-    .from {
-      font: 400 3.2rem/1.2 'Asul',Arial,sans-serif;
-    }
-
   }
 
 
