@@ -420,7 +420,9 @@ Pace.on 'hide', ->
   
 
 
-  $(".hotspot-area").on "click", ()->
+  $(".hotspot-area").on "click", (e)->
+    e.preventDefault();
+    e.stopPropagation();
     API.openHotSpot($(this).data("hotspot"))
 
   $(".hotspot-wrapper .close").on "click", ()->
