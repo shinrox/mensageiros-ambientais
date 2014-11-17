@@ -439,6 +439,15 @@ video {
 
 .image-quote {
   text-align: left;
+
+  .quote, .quotes {
+    font: 400 36px/40px 'Cookie',sans-serif !important;
+    text-shadow: 2px 2px 4px #000 !important;
+  }
+
+  .from {
+    font: 400 24px/1.25 'Asul',Arial,sans-serif !important;
+  }
 }
 
 .image-hotspot{

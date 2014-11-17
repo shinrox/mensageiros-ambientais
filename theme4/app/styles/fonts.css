@@ -1,0 +1,172 @@
+@font-face {
+  font-family: 'Asul';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/asul-bold-webfont.eot');
+  src: url('fonts/asul-bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('fonts/asul-bold-webfont.woff2') format('woff2'),
+  url('fonts/asul-bold-webfont.woff') format('woff'),
+  url('fonts/asul-bold-webfont.ttf') format('truetype'),
+  url('fonts/asul-bold-webfont.svg#asulbold') format('svg');
+  /*unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+*/
+}
+
+
+
+
+@font-face {
+  font-family: 'Asul';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/asul-regular-webfont.eot');
+  src: url('fonts/asul-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('fonts/asul-regular-webfont.woff2') format('woff2'),
+  url('fonts/asul-regular-webfont.woff') format('woff'),
+  url('fonts/asul-regular-webfont.ttf') format('truetype'),
+  url('fonts/asul-regular-webfont.svg#asulregular') format('svg');
+  /*unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+*/
+}
+
+
+
+
+@font-face {
+  font-family: 'Cookie';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/cookie-regular-webfont.eot');
+  src: url('fonts/cookie-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('fonts/cookie-regular-webfont.woff2') format('woff2'),
+  url('fonts/cookie-regular-webfont.woff') format('woff'),
+  url('fonts/cookie-regular-webfont.ttf') format('truetype'),
+  url('fonts/cookie-regular-webfont.svg#cookieregular') format('svg');
+  /*unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+*/
+}
+
+
+
+
+@font-face {
+  font-family: 'Dancing Script';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/dancingscript-regular-webfont.eot');
+  src: url('fonts/dancingscript-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('fonts/dancingscript-regular-webfont.woff2') format('woff2'),
+  url('fonts/dancingscript-regular-webfont.woff') format('woff'),
+  url('fonts/dancingscript-regular-webfont.ttf') format('truetype'),
+  url('fonts/dancingscript-regular-webfont.svg#dancing_scriptregular') format('svg');
+  /*unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+*/
+}
+
+
+
+
+@font-face {
+  font-family: 'Dancing Script';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/dancingscript-bold-webfont.eot');
+  src: url('fonts/dancingscript-bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('fonts/dancingscript-bold-webfont.woff2') format('woff2'),
+  url('fonts/dancingscript-bold-webfont.woff') format('woff'),
+  url('fonts/dancingscript-bold-webfont.ttf') format('truetype'),
+  url('fonts/dancingscript-bold-webfont.svg#dancing_scriptbold') format('svg');
+  /*unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+*/
+}
+
+
+
+
+@font-face {
+  font-family: 'Playball';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/playball-regular-webfont.eot');
+  src: url('fonts/playball-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('fonts/playball-regular-webfont.woff2') format('woff2'),
+  url('fonts/playball-regular-webfont.woff') format('woff'),
+  url('fonts/playball-regular-webfont.ttf') format('truetype'),
+  url('fonts/playball-regular-webfont.svg#playballregular') format('svg');
+  /*unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+*/
+}
+
+
+
+
+@font-face {
+  font-family: 'Quattrocento Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/quattrocentosans-bold-webfont.eot');
+  src: url('fonts/quattrocentosans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('fonts/quattrocentosans-bold-webfont.woff2') format('woff2'),
+  url('fonts/quattrocentosans-bold-webfont.woff') format('woff'),
+  url('fonts/quattrocentosans-bold-webfont.ttf') format('truetype'),
+  url('fonts/quattrocentosans-bold-webfont.svg#quattrocento_sansbold') format('svg');
+ /* unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+*/
+}
+
+
+
+
+@font-face {
+  font-family: 'Quattrocento Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: url('fonts/quattrocentosans-bolditalic-webfont.eot');
+  src: url('fonts/quattrocentosans-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+  url('fonts/quattrocentosans-bolditalic-webfont.woff2') format('woff2'),
+  url('fonts/quattrocentosans-bolditalic-webfont.woff') format('woff'),
+  url('fonts/quattrocentosans-bolditalic-webfont.ttf') format('truetype'),
+  url('fonts/quattrocentosans-bolditalic-webfont.svg#quattrocento_sansbold_italic') format('svg');
+  /*unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+*/
+}
+
+
+
+
+@font-face {
+  font-family: 'Quattrocento Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url('fonts/quattrocentosans-italic-webfont.eot');
+  src: url('fonts/quattrocentosans-italic-webfont.eot?#iefix') format('embedded-opentype'),
+  url('fonts/quattrocentosans-italic-webfont.woff2') format('woff2'),
+  url('fonts/quattrocentosans-italic-webfont.woff') format('woff'),
+  url('fonts/quattrocentosans-italic-webfont.ttf') format('truetype'),
+  url('fonts/quattrocentosans-italic-webfont.svg#quattrocento_sansitalic') format('svg');
+  /*unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+*/
+}
+
+
+
+
+@font-face {
+  font-family: 'Quattrocento Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/quattrocentosans-regular-webfont.eot');
+  src: url('fonts/quattrocentosans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('fonts/quattrocentosans-regular-webfont.woff2') format('woff2'),
+  url('fonts/quattrocentosans-regular-webfont.woff') format('woff'),
+  url('fonts/quattrocentosans-regular-webfont.ttf') format('truetype'),
+  url('fonts/quattrocentosans-regular-webfont.svg#quattrocento_sansregular') format('svg');
+ /* unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+*/
+
+}

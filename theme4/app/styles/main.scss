@@ -110,7 +110,7 @@
   }
 
   .group .headline {
-    text-shadow: none;
+    text-shadow: none !important;
   }
 
   .content{
@@ -580,7 +580,7 @@
  }
 
  .headline {
-  text-shadow: none;
+  text-shadow: none !important;
   color: #000;
  }
 
@@ -756,7 +756,7 @@
   }
 
   .headline {
-  text-shadow: none;
+  text-shadow: none !important;
   color: #000;
  }
 
@@ -794,11 +794,17 @@
  .second {
     .content {
       position: absolute;
-      top: 21%;
-      height: 80%;
+      top: 0%;
+      height: 100%;
       width: 50%;
       left: 5%;
       text-align: left;
+      display:table;
+
+      .content-wrapper{
+        display:table-cell;
+        vertical-align: middle;
+      }
 
       .headline {
         font: 500 2.9rem/1.2 'Asul',Arial,sans-serif;

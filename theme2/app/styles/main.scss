@@ -490,7 +490,7 @@
     height: 100%;
     font: 700 2.6rem/1.2 'Asul',Arial,sans-serif;
     color: #000;
-    text-shadow: none;
+    text-shadow: none !important;
     line-height: 20px;
     text-align: left;
     display: table;
@@ -508,7 +508,7 @@
     .headline {
       font: 700 2.6rem/1.2 'Asul',Arial,sans-serif;
       color: #000;
-      text-shadow: none;
+      text-shadow: none !important;
       line-height: 20px;
     }
 

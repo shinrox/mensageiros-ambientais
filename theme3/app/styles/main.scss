@@ -73,7 +73,7 @@
 
     .headline {
       color:#000;
-      text-shadow: none;
+      text-shadow: none !important;
     }
 
     .content-wrapper{
@@ -184,6 +184,7 @@
       img {
         position: absolute;
         right: 0;
+        height: 100%;
       }
     }
 
@@ -408,7 +409,7 @@
     
     .headline {
       color: #000;
-      text-shadow: none;
+      text-shadow: none !important;
       display: table-cell;
       vertical-align: middle;
     }
@@ -617,7 +618,7 @@
 
     .headline {
       color: #000;
-      text-shadow: none;
+      text-shadow: none !important;
       padding: 5px 0;
     }
 
