@@ -32,6 +32,17 @@ content="http://mensageirosambientais.com" />
   <script src="bower_components/modernizr/modernizr.js"></script>
   <!-- endbuild -->
 
+  <script type='text/javascript'>
+    var paceOptions = {
+      ajax: false, // disabled
+      document: false, // disabled
+      eventLag: false, // disabled
+      eventLag: {
+        lagThreshold: 12
+      }
+    }
+  </script>
+
   <!-- build:js scripts/vendor/pace.js -->
   <script src="scripts/pace.js"></script>
   <!-- endbuild -->
@@ -631,8 +642,46 @@ content="http://mensageirosambientais.com" />
       <div class="hotspot-wrapper hidden credits" data-hotspot="credits">
 
         <div class="video-wrapper wrapper fundo">
-          <img src="images/credits.jpg">
+          <div class="img-wrapper">
+            <img src="images/credits.jpg">
+
+            <div class="image-hotspot hotspot-area" data-hotspot="address">
+              
+            </div>
+          </div>
         </div>
+
+
+        <div class="close"><span class="icon-close">X</span></div>
+      </div>
+
+      <div class="hotspot-wrapper hidden address" data-hotspot="address">
+
+        <div class="video-wrapper wrapper fundo">
+          <div class="img-wrapper">
+            <img src="images/address.jpg">
+
+            <div class="links-wrapper">
+              <div class="link-area" data-link="http://cidadessemfome.org/pt-br/"></div>
+              <div class="link-area" data-link="http://aao.org.br/aao/"></div>
+              <div class="link-area" data-link="http://www.muda.org.br/"></div>
+              <div class="link-area" data-link="http://www.contraosagrotoxicos.org"></div>
+              <div class="link-area" data-link="http://www.bielbaum.com"></div>
+              <div class="link-area" data-link="http://www.slowfoodbrasil.com"></div>
+              <div class="link-area" data-link="http://www.foodrevolutionday.com"></div>
+              <div class="link-area" data-link="http://favelaorganica.com"></div>
+              <div class="link-area" data-link="http://www.bancodealimentos.org.br"></div>
+              <div class="link-area" data-link="http://www.aguaecidade.org.br"></div>
+              <div class="link-area" data-link="http://www.sociedadedosol.org.br"></div>
+              <div class="link-area" data-link="http://www.akatu.org.br"></div>
+              <div class="link-area" data-link="http://rioseruas.com"></div>
+              <div class="link-area big" data-link="http://www.architectureandvision.com/projects/architecture/84-projects/art/492-073-warkawater-2012?showall=&start=1"></div>
+              <div class="link-area" data-link="http://www.leotannous.com.br"></div>
+              <div class="link-area" data-link="http://www.sempresustentavel.com.br"></div>
+              <div class="link-area" data-link="http://www.viradasustentavel.com"></div>
+            </div>
+          </div>
+          </div>
 
         <div class="close"><span class="icon-close">X</span></div>
       </div>

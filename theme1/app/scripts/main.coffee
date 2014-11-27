@@ -72,13 +72,12 @@ API.setSize = ()->
     w: base.w * percent
     h: base.h * percent
 
-  $('.theme').css({
+  $('.theme, .hotspot-wrapper .img-wrapper').css({
     width: fixed.w
     height: fixed.h
     "margin-left": -(fixed.w / 2)
     "margin-top": -(fixed.h / 2)
   })
-
 
 onResize = do ->
   throttle = 70 # tempo em ms
@@ -338,8 +337,32 @@ API.events =
       API.playMedia(API.videos.v3_14)
     else
       API.pauseMedia(API.videos.v3_14)
+
+# API.paceFix = do ->
+#   countdown = 
+#     current: 0
+#     reset: ()->
+#       @current = 0
+#     increase: ()->
+#       @current++
+
+#   API.lastPercent = Pace.bar.progress
+
+#   return ()->
+#     if API.lastPercent is Pace.bar.progress and Pace.bar.progress > 90
+#       countdown.increase()
+      
+#       if countdown.current >= 9 and Pace.bar.progress > 90
+#         countdown.reset()
+#         Pace.stop()
+#     else
+#       countdown.reset()
+    
+
+# API.paceInterval = setInterval API.paceFix, 600
       
 Pace.on 'hide', ->
+  # clearInterval(API.paceInterval)
   $("#loading").fadeOut()
   API.videos =
     v1: $(".scene-1 video")[0]
@@ -433,7 +456,16 @@ Pace.on 'hide', ->
     API.hotspotOn = false;
     $(".hotspot-wrapper:visible").fadeOut 400, ()->
       API.resumePlaying()
-    
+
+  $(".link-area").on "click", (e)->
+    e.preventDefault();
+    e.stopPropagation();
+    window.open($(this).data('link'));
+
+  $("#project-wrapper .share a").on "click", (e)->
+    e.preventDefault();
+    e.stopPropagation();
+    window.open($(this).attr('href'));
 
 $(window).on "unload", ()->
   window.scrollTo(0,0)

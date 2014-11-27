@@ -85,7 +85,7 @@ API.setSize = ()->
     w: base.w * percent
     h: base.h * percent
 
-  $('.theme').css({
+  $('.theme, .hotspot-wrapper .img-wrapper').css({
     width: fixed.w
     height: fixed.h
     "margin-left": -(fixed.w / 2)
@@ -266,7 +266,7 @@ Pace.on 'hide', ->
   
 
 
-  $(".hotspot-area").on "click", ()->
+  $(".hotspot-area").on "click", (e)->
     e.preventDefault();
     e.stopPropagation();
     API.openHotSpot($(this).data("hotspot"))
@@ -279,6 +279,17 @@ Pace.on 'hide', ->
     API.hotspotOn = false;
     $(".hotspot-wrapper:visible").fadeOut 400, ()->
       API.resumePlaying()
+
+
+  $(".link-area").on "click", (e)->
+    e.preventDefault();
+    e.stopPropagation();
+    window.open($(this).data('link'));
+
+  $("#project-wrapper .share a").on "click", (e)->
+    e.preventDefault();
+    e.stopPropagation();
+    window.open($(this).attr('href'));
     
 
 $(window).on "unload", ()->

@@ -40,6 +40,8 @@ a{
   }
 }
 
+
+
 body > div.theme {
   position:fixed;
   top:50%;
@@ -512,4 +514,59 @@ p, .headline {
 
 .wrapper {
   text-align: center;
+}
+
+
+div.hotspot-wrapper.credits{
+  .img-wrapper{
+    top:50%;
+    left:50%;
+    position: absolute;
+  }
+
+  .hotspot-area {
+    width: 12%;
+    height: 6%;
+    top: 91%;
+    left: 22.5%;
+    position: absolute;
+    background-color: black;
+    filter: alpha(opacity=0);
+    background-color: rgba(0,0,0,0);
+    bottom: initial;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+}
+
+div.hotspot-wrapper.address{
+  .img-wrapper{
+    top:50%;
+    left:50%;
+    position: absolute;
+  }
+  .links-wrapper{
+    width: 39%;
+    height: 70.4%;
+    left: 56%;
+    position: absolute;
+    top: 20.6%;
+  }
+
+  .link-area {
+    width: 100%;
+    height: 5%;
+    background-color: black;
+    filter: alpha(opacity=0);
+    background-color: rgba(0,0,0,0);
+    bottom: initial;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .link-area.big{
+    height: 19%;
+  }
 }
